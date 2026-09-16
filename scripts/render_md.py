@@ -6,47 +6,13 @@ import numpy as np
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation, PillowWriter
 from ase.io import read
 
 ROOT=Path('results/short-md')
 COLORS={'Si':'#e5ae59','O':'#e15b64','C':'#545f70','F':'#57c9a5'}
 
 
-def render(name):
-    folder=ROOT/name
-    frames=read(folder/'trajectory.extxyz',index=':')
-    interface=name.startswith('interface')
-    if not interface: frames=[a.repeat((2,2,2)) for a in frames]
-    fig=plt.figure(figsize=(7,6),facecolor='#f7f9fc')
-    ax=fig.add_subplot(111,projection='3d')
-    ax.set_facecolor('#f7f9fc')
-    atoms=frames[0]
-    xyz=atoms.positions
-    colors=[COLORS[s] for s in atoms.get_chemical_symbols()]
-    points=ax.scatter(*xyz.T,c=colors,s=65 if interface else 100,edgecolors='#364152',linewidths=.4,depthshade=True)
-    if interface:
-        ax.set(xlim=(0,10),ylim=(0,10),zlim=(0,31)); ax.set_box_aspect((10,10,31)); ax.view_init(elev=12,azim=-65)
-        ax.set_position([0.06, 0.23, 0.82, 0.64])
-        ax.tick_params(labelsize=8, pad=1)
-        caption='CF2 / SiO2 | 153 atoms | 30 eV | ' + ('GPU' if name.endswith('gpu') else 'CPU')
-        fig.text(.5,.045,'Si: gold   O: red   C: gray   F: green\nExploratory trajectory; frozen bottom; cold substrate',ha='center',fontsize=10)
-    else:
-        length=atoms.cell.lengths()[0]
-        ax.set(xlim=(-.4,length+.4),ylim=(-.4,length+.4),zlim=(-.4,length+.4)); ax.set_box_aspect((1,1,1)); ax.view_init(elev=22,azim=35)
-        caption='Silicon crystal | '+name.upper()+' | NVE'
-        fig.text(.5,.045,'8 simulated atoms; 2×2×2 periodic copies shown\nActual displacements, no magnification',ha='center',fontsize=10)
-    ax.set_xlabel('x (Å)'); ax.set_ylabel('y (Å)'); ax.set_zlabel('z (Å)')
-    title=fig.suptitle(caption+'\nt = 0.0 fs',fontsize=13,fontweight='bold')
-    def update(i):
-        points._offsets3d=tuple(frames[i].positions.T)
-        title.set_text(caption+f"\nt = {frames[i].info['time_fs']:.1f} fs")
-        return points,title
-    fig.savefig(folder/'initial.png',dpi=130)
-    anim=FuncAnimation(fig,update,frames=len(frames),interval=100,blit=False)
-    anim.save(folder/'animation.gif',writer=PillowWriter(fps=10),dpi=100)
-    update(len(frames)-1); fig.savefig(folder/'final.png',dpi=130)
-    plt.close(fig)
+from render_atomistic import render
 
 
 def main():
@@ -78,10 +44,10 @@ def main():
     text += ['', '[Matched CPU/GPU comparison and GPU animation](CPU_GPU.md)', '', '## Surface-interface trajectory','',
              'A constructed neutral CF2 projectile starts 3 Å above the archived silica slab, with 30 eV translational energy toward the surface. The substrate initially has zero velocity and is not relaxed; atoms within 2 Å of its bottom are frozen. Original periodic boundaries and vacuum are retained. CF2 starts at 1.3 Å C–F distance and 105° F–C–F angle. This is a new constructed impact, not a continuation with the original dataset velocities.', '',
              f"Minimum distance between an original projectile atom and substrate during this trajectory: {manifests[-1]['minimum_projectile_substrate_distance_A']:.3f} Å. Atom identity is tracked even if bonding changes; no etch yield or reaction assignment is inferred.", '',
-             '![Surface-interface MD](interface/animation.gif)', '',
+             '![CPU / GPU interface comparison](interface_comparison.gif)', '',
              '## Crystal trajectories','',
              'Eight-atom periodic diamond Si cells use each model’s earlier EOS lattice prediction, the same random seed, 300 K initial kinetic temperature, and removed center-of-mass motion. No thermostat or equilibration is applied. ASE temperature uses its 3N convention. Visualizations repeat the simulated cell 2×2×2 without magnifying motion.','',
-             '![MACE crystal MD](mace/animation.gif)', '',
+             '![Crystal model comparison](crystal_comparison.gif)', '',
              '[NequIP animation](nequip/animation.gif) · [DeePMD animation](deepmd/animation.gif)', '',
              '## Numerical diagnostics and reproduction','',
              '![Energy conservation](energy_conservation.png)','',
@@ -92,7 +58,7 @@ def main():
              '.venv-nequip/Scripts/python.exe scripts/run_short_md.py --backend nequip --output results/short-md/nequip',
              '.venv-deepmd/Scripts/python.exe scripts/run_short_md.py --backend deepmd --output results/short-md/deepmd',
              '.venv-deepmd/Scripts/python.exe scripts/run_interface_md.py',
-             '.venv-mace/Scripts/python.exe scripts/render_md.py', '```','']
+             '.venv-render/Scripts/python.exe scripts/render_md.py', '```','']
     (ROOT/'README.md').write_text('\n'.join(text),encoding='utf-8')
     print('Verified four trajectories and rendered results/short-md')
 

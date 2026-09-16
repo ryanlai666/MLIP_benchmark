@@ -1,0 +1,18 @@
+{
+  "renderer": "ASE + PyVista/VTK",
+  "trajectory_sha256": "e89425e73a0eed95c1e8d7f50368704caeef583ef9b835875105989872962fa1",
+  "frames": 41,
+  "fps": 10,
+  "packages": {
+    "ase": "3.26.0",
+    "pyvista": "0.49.0",
+    "vtk": "9.7.0",
+    "pillow": "12.3.0",
+    "imageio": "2.37.4",
+    "imageio-ffmpeg": "0.6.0"
+  },
+  "bond_rule": "Euclidean distance < 1.15 * sum of ASE covalent radii; no periodic bonds across display boundary",
+  "atom_radius": "0.46 * ASE covalent radius; visualization only",
+  "views": "2x2x2 periodic copies of the 8-atom cell",
+  "coordinate_scaling": 1
+}

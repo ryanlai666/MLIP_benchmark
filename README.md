@@ -10,13 +10,15 @@ A **50 fs neutral CF2 impact on silica** (153 atoms, 30 eV, DeePMD DPA-3.3/OMat2
 
 [CPU/GPU comparison](results/short-md/CPU_GPU.md) / [GPU animation](results/short-md/interface-gpu/animation.gif).
 
-![CF2-silica surface-interface MD](results/short-md/interface/animation.gif)
+![Synchronized CPU and GPU interface comparison](results/short-md/interface_comparison.gif)
 
-The interface animation shows actual atom coordinates. Colors: Si gold, O red, C gray, F green. [Initial structure](results/short-md/interface/initial.png) / [Final structure](results/short-md/interface/final.png) / [Energy diagnostics](results/short-md/energy_conservation.png).
+The side-by-side interface animation compares CPU and GPU at identical physical timestamps. ASE/PyVista ball-and-stick renderings use actual atom coordinates; the full-size videos include both the whole slab and the impact close-up. Bond lines are distance-based visual guides, not chemical reaction assignments. Colors: Si gold, O red, C gray, F green. [Side-by-side MP4](results/short-md/interface_comparison.mp4) / [CPU MP4 video](results/short-md/interface/animation.mp4) / [GPU MP4 video](results/short-md/interface-gpu/animation.mp4) / [Visualization details](docs/VISUALIZATION.md).
 
-![Silicon crystal MD](results/short-md/mace/animation.gif)
+[Initial structure](results/short-md/interface/initial.png) / [Final structure](results/short-md/interface/final.png) / [Energy diagnostics](results/short-md/energy_conservation.png).
 
-Crystal display: eight simulated atoms with 2x2x2 periodic copies, without magnifying displacements. [NequIP animation](results/short-md/nequip/animation.gif) / [DeePMD animation](results/short-md/deepmd/animation.gif).
+![Synchronized MACE, NequIP and DeePMD crystal comparison](results/short-md/crystal_comparison.gif)
+
+[Crystal comparison MP4](results/short-md/crystal_comparison.mp4). The three panels show the same physical timestamp. Crystal display: eight simulated atoms with 2x2x2 periodic copies, without magnifying displacements. [NequIP animation](results/short-md/nequip/animation.gif) / [DeePMD animation](results/short-md/deepmd/animation.gif).
 
 The pilot contains four crystal, two surface and six etching frames per materials model, plus a two-atom Si equation of state. Snapshot force accuracy is measured against archived DFT labels. Equation-of-state values are predictions without matched DFT property validation. These small samples do not establish production plasma accuracy, etch rates or a general model ranking.
 

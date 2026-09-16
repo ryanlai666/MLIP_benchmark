@@ -1,4 +1,4 @@
-﻿"""Compare matched CPU/CUDA impact trajectories without asserting speed rankings."""
+"""Compare matched CPU/CUDA impact trajectories without asserting speed rankings."""
 import csv
 import json
 from pathlib import Path
@@ -42,7 +42,7 @@ lines=['# CPU and GPU surface-impact comparison','',
     f"| {mg['gpu_name']} | {mg['wall_seconds']:.2f} | {mg['max_abs_energy_change_meV_atom']:.5f} |",'',
     f"Initial total-energy difference: {comparison['initial_energy_absolute_difference_eV']:.6g} eV. Final Cartesian coordinate RMS difference: {comparison['final_position_rms_difference_A']:.6g} Angstrom.",'',
     'Wall times include model initialization and output writing; CUDA is synchronized before final timing. These are single-run timings, not controlled steady-state throughput measurements. CPU/GPU trajectories can diverge numerically, so compare identical input frames for force-accuracy validation.','',
-    '![GPU interface trajectory](interface-gpu/animation.gif)','',
+    '![Synchronized CPU / GPU interface trajectories](interface_comparison.gif)','',
     '[CPU animation](interface/animation.gif) / [GPU manifest](interface-gpu/manifest.json) / [Comparison JSON](cpu_gpu_comparison.json)','',
     '## Reproduction','',
     'Use the separate GPU environment; do not replace the tested CPU environment. The PyTorch wheel requires the CUDA index as well as its version pin. See the [official PyTorch installation archive](https://pytorch.org/get-started/previous-versions/).','',
@@ -51,7 +51,7 @@ lines=['# CPU and GPU surface-impact comparison','',
     'uv pip install --python .venv-deepmd-gpu/Scripts/python.exe -r environments/deepmd-windows-py311.lock.txt',
     'uv pip install --python .venv-deepmd-gpu/Scripts/python.exe torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128 --reinstall-package torch',
     '.venv-deepmd-gpu/Scripts/python.exe scripts/run_interface_md.py --device cuda --output results/short-md/interface-gpu',
-    '.venv-mace/Scripts/python.exe scripts/compare_md_devices.py','```','',
+    '.venv-render/Scripts/python.exe scripts/compare_md_devices.py','```','',
     'Use new output folders for repeat trajectories. The installed GPU package snapshot is in `environments/deepmd-gpu-windows-py311.lock.txt`. All physical caveats in the [MD report](README.md) apply to both devices.','']
 (root/'CPU_GPU.md').write_text('\n'.join(lines),encoding='utf-8')
 print(json.dumps(comparison,indent=2))

@@ -17,13 +17,13 @@ A constructed neutral CF2 projectile starts 3 Å above the archived silica slab,
 
 Minimum distance between an original projectile atom and substrate during this trajectory: 1.474 Å. Atom identity is tracked even if bonding changes; no etch yield or reaction assignment is inferred.
 
-![Surface-interface MD](interface/animation.gif)
+![CPU / GPU interface comparison](interface_comparison.gif)
 
 ## Crystal trajectories
 
 Eight-atom periodic diamond Si cells use each model’s earlier EOS lattice prediction, the same random seed, 300 K initial kinetic temperature, and removed center-of-mass motion. No thermostat or equilibration is applied. ASE temperature uses its 3N convention. Visualizations repeat the simulated cell 2×2×2 without magnifying motion.
 
-![MACE crystal MD](mace/animation.gif)
+![Crystal model comparison](crystal_comparison.gif)
 
 [NequIP animation](nequip/animation.gif) · [DeePMD animation](deepmd/animation.gif)
 
@@ -42,5 +42,7 @@ Run from the repository root with the existing isolated environments, in this or
 .venv-nequip/Scripts/python.exe scripts/run_short_md.py --backend nequip --output results/short-md/nequip
 .venv-deepmd/Scripts/python.exe scripts/run_short_md.py --backend deepmd --output results/short-md/deepmd
 .venv-deepmd/Scripts/python.exe scripts/run_interface_md.py
-.venv-mace/Scripts/python.exe scripts/render_md.py
+.venv-render/Scripts/python.exe scripts/render_md.py
 ```
+
+Rendering uses ASE + PyVista/VTK. See [visualization setup and conventions](../../docs/VISUALIZATION.md). MP4 videos are available next to each GIF.
