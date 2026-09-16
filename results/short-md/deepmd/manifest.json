@@ -1,0 +1,28 @@
+{
+  "backend": "deepmd",
+  "status": "completed",
+  "natoms": 8,
+  "lattice_A": 5.4504,
+  "ensemble": "NVE",
+  "timestep_fs": 0.5,
+  "steps": 200,
+  "duration_fs": 100,
+  "initial_temperature_K": 300,
+  "seed": 20260915,
+  "device": "cpu",
+  "torch_threads": 4,
+  "equilibration_steps": 0,
+  "temperature_convention": "ASE 3N degrees of freedom; center-of-mass motion removed",
+  "packages": {
+    "ase": "3.26.0",
+    "torch": "2.11.0",
+    "numpy": "2.4.6"
+  },
+  "model": "DPA-3.3-1M / OMat24",
+  "checkpoint_sha256": "36fe440c111108d60cda54aa7d3fccac743794de25abef4d49564b9fb896a55b",
+  "saved_frames": 41,
+  "wall_seconds": 22.739613899997494,
+  "final_temperature_K": 211.34843302352186,
+  "final_energy_change_meV_atom": 0.004768074555627777,
+  "max_abs_energy_change_meV_atom": 0.008508833294840201
+}

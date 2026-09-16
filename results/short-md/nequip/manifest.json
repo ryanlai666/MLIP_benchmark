@@ -1,0 +1,28 @@
+{
+  "backend": "nequip",
+  "status": "completed",
+  "natoms": 8,
+  "lattice_A": 5.4702,
+  "ensemble": "NVE",
+  "timestep_fs": 0.5,
+  "steps": 200,
+  "duration_fs": 100,
+  "initial_temperature_K": 300,
+  "seed": 20260915,
+  "device": "cpu",
+  "torch_threads": 4,
+  "equilibration_steps": 0,
+  "temperature_convention": "ASE 3N degrees of freedom; center-of-mass motion removed",
+  "packages": {
+    "ase": "3.26.0",
+    "torch": "2.14.0",
+    "numpy": "2.4.6"
+  },
+  "model": "NequIP-OAM-S 0.1",
+  "checkpoint_sha256": "63d4bafd872850a014fd21dedeea416b61173a17750dee0b2b8dd2b126f407aa",
+  "saved_frames": 41,
+  "wall_seconds": 5.591259599998011,
+  "final_temperature_K": 237.44009903959494,
+  "final_energy_change_meV_atom": 0.002476154389086105,
+  "max_abs_energy_change_meV_atom": 0.0068654301621506875
+}

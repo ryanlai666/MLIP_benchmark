@@ -1,0 +1,8 @@
+{
+  "backend": "nequip",
+  "checkpoint": "models/si.nequip.pt2",
+  "device": "cpu",
+  "species_map": {"Si": "Si"},
+  "energy_units_to_eV": 1.0,
+  "length_units_to_A": 1.0
+}

@@ -1,0 +1,4 @@
+{
+  "backend": "deepmd",
+  "checkpoint": "models/si.pb"
+}

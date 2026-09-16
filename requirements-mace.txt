@@ -1,0 +1,16 @@
+# Initial compatibility constraints, NOT a tested environment lock.
+# Use Python 3.11; freeze the successful environment before research runs.
+ase==3.23.0
+mace-torch>=0.3.10,<0.4
+numpy<2
+scipy
+jarvis-tools
+pydantic-settings
+pandas
+matplotlib
+scikit-learn
+h5py
+plotly<6
+kaleido==0.2.1
+tqdm
+requests

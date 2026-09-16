@@ -1,0 +1,21 @@
+# Published starting points and scope limits
+
+Sources checked 2026-09-15. These are authors' published/model-card results, **not local measurements**. Different datasets, model sizes, error definitions and reference theories prevent ranking these numbers against one another.
+
+| Family/checkpoint | Published performance or capability | Implication for this project |
+|---|---|---|
+| MACE-MP | Official model catalog describes MP-0b improvements to repulsion and isolated atoms, 0b2 high-pressure stability, and 0b3 phonon fixes; it explicitly does not guarantee improvement in every case. [Catalog](https://github.com/ACEsuit/mace-foundations) | Use MP-0b3 medium as a materials baseline. Stability improvements do not establish CFx collision accuracy; test the actual surface and close-contact regime. |
+| NequIP-OAM-S | Paper Table 2: WBM convex-hull energy MAE **45.9 meV/atom**, geometry RMSD **0.094 Å**, thermal-conductivity SRME **0.855**. Larger OAM-XL gives **19.7 meV/atom** and **0.129 SRME**. [Paper](https://arxiv.org/html/2607.28461v1) | The small checkpoint trades accuracy for speed. These materials-property metrics are neither force MAEs nor etching validation. |
+| DeePMD DPA-3.3-1M | Model card: OC20NEB barrier MAE **1.098 eV**, reaction-energy MAE **0.109 eV**; Wiggle150 MAE **1.527 kcal/mol**, RMSE **2.067 kcal/mol**. [Authors' model card](https://huggingface.co/deepmodelingcommunity/DPA-3.3-1M) | A compact multitask candidate. Select the reference branch explicitly; catalytic barrier errors warrant caution even if instantaneous force errors appear small. These published tasks are not fluorocarbon etching. |
+| OMol25 baseline eSEN-md, full training set | Paper reports test-split-average energy MAE **1.20 meV/atom** and force MAE **12.34 meV/Å**. [OMol25 paper](https://arxiv.org/html/2505.08762v1) | This is an eSEN result on molecular tests, not a promised score for the DPA OMol25 branch used here. OMol25 is a dataset/task, not one potential. |
+| SevenNet-Omni, contextual etching baseline | Authors report energy/force MAEs below **20 meV/atom / 0.25 eV/Å** across the tested bulk and mild-impact etching configurations. They warn that low errors on **30 eV** impacts can hide failures at much higher energies. [Dataset paper](https://arxiv.org/html/2604.10887v1) | The six local etching frames probe only the mild-impact data regime. Add their quasi-static drag data and higher-energy validation before etch-yield MD. |
+
+OMol25 was accepted by the user as the replacement for OMol26. For the local molecular pilot, use the **DPA-3.3-1M / OMol25** branch on isolated F2 and SiF4, with charge 0 and multiplicity 1. For periodic crystal/surface snapshots use the **OMat24** branch. This is not a run of UMA or eSEN.
+
+The [UMA task documentation](https://github.com/facebookresearch/fairchem/blob/main/docs/core/uma.md) also distinguishes molecular OMol25 training from inorganic tasks. Molecular accuracy does not automatically transfer to a periodic semiconductor or a charged impact system.
+
+## Reference conventions for the local pilot
+
+- Crystal/surface labels: original MLearn `data/Si/test.json`, commit `10c427a5480c6281c15c64efaf869b03be04818f`, [repository](https://github.com/materialyzeai/mlearn). No training or test-set energy offset fitting is performed. Pretraining overlap remains unknown.
+- Etching labels: [Zenodo record 19491140](https://zenodo.org/records/19491140), archive MD5 `c0b18d62a9ba8905b29fe3e90689c325`. The [paper's methods](https://arxiv.org/html/2604.10887v1#S2.SS3) specify spin-polarized VASP PBE/PAW, 520 eV cutoff and Gamma-point sampling for these non-bulk systems. The paper includes D3 in etching simulations; whether every archived single-point label includes that correction needs confirmation from the underlying calculation inputs. Retain that uncertainty when interpreting errors.
+- Fragment geometry references: NIST CCCBDB lists [F2](https://cccbdb.nist.gov/exp2x.asp?casno=7782414&charge=0) equilibrium distance about 1.4119 Å and [SiF4](https://cccbdb.nist.gov/exp2x.asp?casno=7783611&charge=0) Si-F distance 1.554 Å derived from B0. The latter includes a vibrational convention difference from an optimized model equilibrium geometry. This comparison combines model/DFT and experiment-convention differences.

@@ -1,0 +1,13 @@
+{
+  "checkpoint_sha256": "36fe440c111108d60cda54aa7d3fccac743794de25abef4d49564b9fb896a55b",
+  "natoms": 153,
+  "duration_fs": 50,
+  "cpu_wall_seconds": 193.94760150000366,
+  "gpu_wall_seconds": 45.10577569999441,
+  "initial_energy_absolute_difference_eV": 1.811981201171875e-05,
+  "final_position_rms_difference_A": 4.687860375494483e-08,
+  "max_saved_coordinate_difference_A": 2.2000000043931323e-07,
+  "gpu_parameter_devices": [
+    "cuda:0"
+  ]
+}

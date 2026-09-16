@@ -1,0 +1,8 @@
+.venv*/
+__pycache__/
+*.pyc
+results/*
+!results/short-md/
+upstream/
+data/downloads/
+models/

@@ -1,0 +1,6 @@
+{
+  "backend": "mace",
+  "checkpoint": "models/si-mace.model",
+  "device": "cpu",
+  "default_dtype": "float64"
+}

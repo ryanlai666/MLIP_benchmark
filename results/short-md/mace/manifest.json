@@ -1,0 +1,28 @@
+{
+  "backend": "mace",
+  "status": "completed",
+  "natoms": 8,
+  "lattice_A": 5.4709021605,
+  "ensemble": "NVE",
+  "timestep_fs": 0.5,
+  "steps": 200,
+  "duration_fs": 100,
+  "initial_temperature_K": 300,
+  "seed": 20260915,
+  "device": "cpu",
+  "torch_threads": 4,
+  "equilibration_steps": 0,
+  "temperature_convention": "ASE 3N degrees of freedom; center-of-mass motion removed",
+  "packages": {
+    "ase": "3.26.0",
+    "torch": "2.14.0",
+    "numpy": "1.26.4"
+  },
+  "model": "MACE-MP-0b3 medium",
+  "checkpoint_sha256": "2f2be696351ac9e94fbe01cdfb6f017679acdbd2db7645209ef55fec9826b012",
+  "saved_frames": 41,
+  "wall_seconds": 23.746300699996937,
+  "final_temperature_K": 218.21030767848245,
+  "final_energy_change_meV_atom": 0.00324528923911771,
+  "max_abs_energy_change_meV_atom": 0.0075935577203978255
+}

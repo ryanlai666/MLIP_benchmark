@@ -1,0 +1,9 @@
+{
+  "structure_path": "data/structures/Si.vasp",
+  "calculator_type": "mace",
+  "properties_to_calculate": ["relax_structure", "calculate_ev_curve"],
+  "bulk_relaxation_settings": {
+    "filter_type": "ExpCellFilter",
+    "relaxation_settings": {"fmax": 0.01, "steps": 300, "constant_volume": false}
+  }
+}
