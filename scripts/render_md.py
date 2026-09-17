@@ -41,7 +41,9 @@ def main():
           '|---|---|---:|---:|---:|---:|']
     for name,m in zip(names,manifests):
         text.append(f"| {name} | {m['model']} | {m['natoms']} | {m['duration_fs']} | {m['timestep_fs']} | {m['max_abs_energy_change_meV_atom']:.5f} |")
-    text += ['', '[Matched CPU/GPU comparison and GPU animation](CPU_GPU.md)', '', '## Surface-interface trajectory','',
+    text += ['', '[Matched CPU/GPU comparison and GPU animation](CPU_GPU.md)', '',
+             'Twenty-times-longer runs of these same systems, and a comparison against every archived DFT frame of the etching reference trajectory, are in [the longer-trajectory report](../long-md/README.md).', '',
+             '## Surface-interface trajectory','',
              'A constructed neutral CF2 projectile starts 3 Å above the archived silica slab, with 30 eV translational energy toward the surface. The substrate initially has zero velocity and is not relaxed; atoms within 2 Å of its bottom are frozen. Original periodic boundaries and vacuum are retained. CF2 starts at 1.3 Å C–F distance and 105° F–C–F angle. This is a new constructed impact, not a continuation with the original dataset velocities.', '',
              f"Minimum distance between an original projectile atom and substrate during this trajectory: {manifests[-1]['minimum_projectile_substrate_distance_A']:.3f} Å. Atom identity is tracked even if bonding changes; no etch yield or reaction assignment is inferred.", '',
              '![CPU / GPU interface comparison](interface_comparison.gif)', '',

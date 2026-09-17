@@ -2,7 +2,23 @@
 
 A completed small CPU pilot compares MACE-MP-0b3, NequIP-OAM-S and DeePMD DPA-3.3-1M on Si crystals, Si surfaces and SiO2/CFx etching DFT snapshots. The DPA OMol25 branch separately optimizes F2 and SiF4. Models ran sequentially in isolated environments; no training was performed.
 
-Start with [measured results](reports/PILOT_RESULTS.md), [reproduction instructions](docs/RUN_PILOT.md), [published performance and limitations](docs/PUBLISHED_BASELINES.md), and [development notes](docs/DEVELOPMENT.md). [Model identities](docs/MODELS.md) distinguish architectures, checkpoints and dataset heads.
+Start with [measured results](reports/PILOT_RESULTS.md), the [longer trajectories and full reference-trajectory validation](results/long-md/README.md), [reproduction instructions](docs/RUN_PILOT.md), [published performance and limitations](docs/PUBLISHED_BASELINES.md), and [development notes](docs/DEVELOPMENT.md). [Model identities](docs/MODELS.md) distinguish architectures, checkpoints and dataset heads.
+
+## Longer trajectories and DFT ground truth
+
+The short runs were extended twentyfold and the snapshot comparison was widened from six frames to a whole reference trajectory. A **1 ps CF2 impact on silica** (153 atoms, DPA-3.3-1M/OMat24, CUDA, 4000 steps in 433 s) and **2 ps Si NVE trajectories** for MACE, NequIP and DeePMD are in [longer trajectories and reference validation](results/long-md/README.md), together with single points from every checkpoint against **all 1000 archived DFT frames** of the CF2 30 eV etching reference trajectory.
+
+| Checkpoint | Force MAE vs DFT (eV/A) | Force RMSE (eV/A) | Raw energy MAE (meV/atom) | Offset-fitted energy MAE (meV/atom) |
+|---|---:|---:|---:|---:|
+| MACE-MP-0b3 medium | 0.1743 | 0.2994 | 12.16 | 6.71 |
+| NequIP-OAM-S 0.1 | 0.2359 | 0.3566 | 23.23 | 7.87 |
+| DPA-3.3-1M / OMat24 | 0.1255 | 0.2217 | 9.37 | 2.94 |
+
+Pooled over 1000 frames and 150,037 atoms, these confirm the six-frame pilot ordering on this one etching sequence; the six pilot frames are a subset, so the two are consistent rather than independent. The archived labels are DFT single points on snapshots another model generated, so they measure agreement along the reference chemistry, not that any of these models would produce that trajectory. Per-frame metrics, per-element errors and both energy conventions are in [the report](results/long-md/README.md) and [`reports/etch_validation_metrics.csv`](reports/etch_validation_metrics.csv).
+
+![CF2 impact on silica, 1 ps](results/long-md/interface-gpu/animation.gif)
+
+The 1 ps impact reaches 4.25 A below the initial surface height at 113 fs and then returns upward; by 1000 fs the projectile carbon is near the top of the retained periodic cell, which bounds how much further this cell can honestly be run.
 
 ## Surface-interface and crystal MD
 

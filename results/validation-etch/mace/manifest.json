@@ -1,0 +1,61 @@
+{
+  "started_utc": "2026-09-17T03:52:22.400522+00:00",
+  "status": "completed",
+  "backend": "mace",
+  "reference_member": "dft/etch/trj_CF2_30eV.extxyz",
+  "archive_sha256": "7e436876cc3f8f7385ce483c801b14427f592ac6e0e34398e584bff4b27d923e",
+  "stride": 1,
+  "device": "cpu",
+  "threads": 4,
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.14",
+  "reference_method": "Authors' DFT labels on 7net-Omni generated etching snapshots",
+  "protocol": "One single point per archived frame; no fitting, no relaxation, no dynamics",
+  "limitations": [
+    "Consecutive archived frames are separate impact snapshots, not adjacent MD steps",
+    "Raw energy differences include reference-convention and energy-zero offsets",
+    "A fitted per-element offset is reported separately and is not a DFT-validated formation energy",
+    "Accuracy on archived snapshots does not establish etch yields or reaction rates"
+  ],
+  "model": "MACE-MP-0b3 medium",
+  "dtype": "float64",
+  "packages": {
+    "torch": "2.14.0",
+    "mace-torch": "0.3.16",
+    "ase": "3.26.0",
+    "numpy": "1.26.4"
+  },
+  "load_seconds": 3.3227802000183146,
+  "wall_seconds": 2810.525058900006,
+  "finished_utc": "2026-09-17T04:39:16.360549+00:00",
+  "summary": {
+    "frames": 1000,
+    "total_atoms": 150037,
+    "force_component_mae_eV_A": 0.17433785416231887,
+    "force_component_rmse_eV_A": 0.2994115965236932,
+    "force_component_max_abs_eV_A": 8.986505826196897,
+    "raw_energy_mae_meV_atom": 12.162511546436177,
+    "raw_energy_mean_signed_error_meV_atom": 10.04428684386304,
+    "offset_fitted_energy_mae_meV_atom": 6.708222745298995,
+    "offset_fitted_energy_rmse_meV_atom": 8.664583652753004,
+    "fitted_element_offsets_eV": {
+      "C": 0.30256770636918784,
+      "F": 0.0922521203127235,
+      "O": -0.10296648336022406,
+      "Si": 0.159223798698231
+    },
+    "median_singlepoint_seconds": 2.4501363999879686,
+    "per_element_force_mae_eV_A": {
+      "C": 0.5251705524996554,
+      "F": 0.16371825108706906,
+      "O": 0.13625091553279792,
+      "Si": 0.22810397049705314
+    },
+    "per_element_force_rmse_eV_A": {
+      "C": 0.7527186976545761,
+      "F": 0.30729943278781874,
+      "O": 0.22999862539707394,
+      "Si": 0.3545888343027309
+    }
+  }
+}

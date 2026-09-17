@@ -46,14 +46,14 @@ def panel(atoms,ids,plotter,cell=False):
         plotter.add_mesh(box,color='#a5b2c4',line_width=1.4)
 
 
-def compose(raw,name,time,interface):
+def compose(raw,name,time,interface,subtitle=None):
     canvas=Image.new('RGB',(W,H+150),'#f4f7fb')
     canvas.paste(Image.fromarray(raw).convert('RGB'),(0,100))
     d=ImageDraw.Draw(canvas)
     title='CF2 impact on silica' if interface else 'Diamond silicon | '+name.upper()
     d.text((32,15),title,font=font(30,True),fill='#162a43')
     device='CUDA / RTX 3070' if name.endswith('gpu') else 'CPU'
-    sub=f'30 eV neutral impact | 153 atoms | DPA-3.3 / OMat24 | {device}' if interface else '100 fs NVE | 8 simulated atoms | 2 x 2 x 2 periodic display'
+    sub=subtitle or (f'30 eV neutral impact | 153 atoms | DPA-3.3 / OMat24 | {device}' if interface else '100 fs NVE | 8 simulated atoms | 2 x 2 x 2 periodic display')
     d.text((34,56),sub,font=font(17),fill='#506178')
     d.text((925,25),f'{time:5.1f} fs',font=font(27,True),fill='#162a43')
     if interface:
@@ -71,8 +71,8 @@ def compose(raw,name,time,interface):
     return canvas
 
 
-def render(name,preview=False):
-    folder=ROOT/name
+def render(name,preview=False,root=ROOT,stride=1,subtitle=None):
+    folder=root/name
     trajectory=folder/'trajectory.extxyz'
     digest=hashlib.sha256(trajectory.read_bytes()).hexdigest()
     frames=read(trajectory,index=':')
@@ -81,7 +81,8 @@ def render(name,preview=False):
     all_ids=np.arange(len(frames[0]))
     zoom_ids=np.where(frames[0].positions[:,2]>17)[0] if interface else all_ids
     images=[]
-    selected=[0] if preview else range(len(frames))
+    selected=[0] if preview else list(range(0,len(frames),stride))
+    if not preview and selected[-1]!=len(frames)-1: selected.append(len(frames)-1)
     for index in selected:
         atoms=frames[index]
         pl=pv.Plotter(off_screen=True,window_size=(W,H),shape=(1,2) if interface else (1,1),border=False)
@@ -101,7 +102,7 @@ def render(name,preview=False):
                 pl.camera_position=[(22,-27,21),(5.3,5.3,5.3),(0,0,1)]
                 pl.enable_parallel_projection(); pl.camera.parallel_scale=9
         raw=pl.screenshot(return_img=True); pl.close()
-        images.append(compose(raw,name,atoms.info['time_fs'],interface))
+        images.append(compose(raw,name,atoms.info['time_fs'],interface,subtitle))
         if index%10==0:print(name,'frame',index,flush=True)
     if preview:
         images[0].save(folder/'preview.png'); return
@@ -112,6 +113,7 @@ def render(name,preview=False):
         for im in images:writer.append_data(np.asarray(im))
     assert hashlib.sha256(trajectory.read_bytes()).hexdigest()==digest
     metadata=dict(renderer='ASE + PyVista/VTK',trajectory_sha256=digest,frames=len(images),fps=10,
+                  saved_frames=len(frames),render_stride=stride,
                   packages={p:importlib.metadata.version(p) for p in ['ase','pyvista','vtk','pillow','imageio','imageio-ffmpeg']},
                   bond_rule='Euclidean distance < 1.15 * sum of ASE covalent radii; no periodic bonds across display boundary',
                   atom_radius='0.46 * ASE covalent radius; visualization only',
@@ -122,6 +124,9 @@ def render(name,preview=False):
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--names',nargs='+',default=['interface','interface-gpu','mace','nequip','deepmd'])
+    parser.add_argument('--root',type=Path,default=ROOT)
+    parser.add_argument('--stride',type=int,default=1,help='Saved frames between rendered images')
+    parser.add_argument('--subtitle',default=None)
     parser.add_argument('--preview',action='store_true')
     args=parser.parse_args()
-    for name in args.names:render(name,args.preview)
+    for name in args.names:render(name,args.preview,args.root,args.stride,args.subtitle)

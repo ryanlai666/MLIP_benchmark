@@ -3,6 +3,9 @@ __pycache__/
 *.pyc
 results/*
 !results/short-md/
+!results/long-md/
+!results/validation-etch/
 upstream/
 data/downloads/
 models/
+*.log

@@ -19,6 +19,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--device', choices=['cpu', 'cuda'], default='cpu')
     parser.add_argument('--output', type=Path, default=Path('results/short-md/interface'))
+    parser.add_argument('--steps', type=int, default=200)
+    parser.add_argument('--timestep-fs', type=float, default=0.25)
+    parser.add_argument('--record-every', type=int, default=4, help='Steps between saved trajectory frames')
     args = parser.parse_args()
     os.environ['DEVICE'] = args.device
     from deepmd.calculator import DP
@@ -42,7 +45,8 @@ def main():
     manifest = dict(status='running', model='DPA-3.3-1M / OMat24', checkpoint_sha256=sha(checkpoint),
                     source=ref, natoms=len(atoms), substrate_atoms=len(slab), projectile='neutral CF2',
                     projectile_translation_eV=30, initial_gap_A=3, CF_bond_A=1.3, FCF_angle_deg=105,
-                    fixed_indices=fixed.tolist(), timestep_fs=0.25, steps=200, duration_fs=50,
+                    fixed_indices=fixed.tolist(), timestep_fs=args.timestep_fs, steps=args.steps,
+                    duration_fs=args.steps*args.timestep_fs, record_every=args.record_every,
                     device=args.device, torch_threads=4,
                     packages={p:importlib.metadata.version(p) for p in ['torch','deepmd-kit','ase','numpy']},
                     cuda_runtime=torch.version.cuda,
@@ -59,20 +63,20 @@ def main():
         manifest['parameter_devices'] = devices
         assert devices and all(d.startswith(args.device) for d in devices), devices
         if args.device == 'cuda': torch.cuda.synchronize()
-        dyn = VelocityVerlet(atoms, timestep=0.25*units.fs)
+        dyn = VelocityVerlet(atoms, timestep=args.timestep_fs*units.fs)
         rows, frames = [], []
         def record():
             ep, ek = atoms.get_potential_energy(), atoms.get_kinetic_energy()
             if not np.isfinite([ep,ek]).all() or not np.isfinite(atoms.positions).all():
                 raise ValueError('Nonfinite trajectory')
             distances = atoms.get_all_distances(mic=True)[len(slab):,:len(slab)]
-            rows.append(dict(step=dyn.nsteps, time_fs=dyn.nsteps*0.25, potential_eV=ep,
+            rows.append(dict(step=dyn.nsteps, time_fs=dyn.nsteps*args.timestep_fs, potential_eV=ep,
                              kinetic_eV=ek, total_eV=ep+ek, projectile_min_substrate_distance_A=float(distances.min()),
                              carbon_z_A=float(atoms.positions[len(slab),2])))
-            if dyn.nsteps % 4 == 0:
-                frame=atoms.copy(); frame.info['time_fs']=dyn.nsteps*0.25; frames.append(frame)
-            if dyn.nsteps % 40 == 0: print('Interface step',dyn.nsteps,flush=True)
-        dyn.attach(record,interval=1); dyn.run(200)
+            if dyn.nsteps % args.record_every == 0:
+                frame=atoms.copy(); frame.info['time_fs']=dyn.nsteps*args.timestep_fs; frames.append(frame)
+            if dyn.nsteps % max(40, args.steps//20) == 0: print('Interface step',dyn.nsteps,flush=True)
+        dyn.attach(record,interval=1); dyn.run(args.steps)
         with (out/'thermodynamics.csv').open('w',newline='') as f:
             writer=csv.DictWriter(f,fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
         write(out/'trajectory.extxyz',frames)

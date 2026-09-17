@@ -79,5 +79,6 @@ Before production etching MD, evaluate short-distance repulsion and quasi-static
 - [DeePMD raw predictions and manifest](../results/pilot-deepmd-dpa33-omat-fixed).
 - [OMol25 output and optimization trajectories](../results/pilot-omol25-fragments).
 - [Machine-readable metrics](pilot_metrics.csv); [published baselines and limits](../docs/PUBLISHED_BASELINES.md).
+- [Longer trajectories and the full 1000-frame reference validation](../results/long-md/README.md); [machine-readable etch metrics](etch_validation_metrics.csv). Those runs extend the six-frame etching subset above to the whole CF2 sequence and reproduce its ordering; the crystal and surface subsets are unchanged.
 
 The two earlier DeePMD attempts remain in results/: Torch 2.14 ABI incompatibility, then a missing e3nn import after matching Torch 2.11.0. The successful environment uses deepmd-kit 3.2.0, torch 2.11.0 and e3nn 0.6.0. Native Windows worked for this CPU pilot; GPU and compiled production inference were not tested.

@@ -11,6 +11,8 @@ Three crystal checks and one surface-interface trajectory were run sequentially 
 
 [Matched CPU/GPU comparison and GPU animation](CPU_GPU.md)
 
+Twenty-times-longer runs of these same systems, and a comparison against every archived DFT frame of the etching reference trajectory, are in [the longer-trajectory report](../long-md/README.md).
+
 ## Surface-interface trajectory
 
 A constructed neutral CF2 projectile starts 3 Å above the archived silica slab, with 30 eV translational energy toward the surface. The substrate initially has zero velocity and is not relaxed; atoms within 2 Å of its bottom are frozen. Original periodic boundaries and vacuum are retained. CF2 starts at 1.3 Å C–F distance and 105° F–C–F angle. This is a new constructed impact, not a continuation with the original dataset velocities.

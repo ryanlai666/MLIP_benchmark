@@ -12,6 +12,9 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--backend', choices=['mace', 'nequip', 'deepmd'], required=True)
     p.add_argument('--output', type=Path, required=True)
+    p.add_argument('--steps', type=int, default=200)
+    p.add_argument('--timestep-fs', type=float, default=0.5)
+    p.add_argument('--record-every', type=int, default=5, help='Steps between saved trajectory frames')
     args = p.parse_args()
     args.output.mkdir(parents=True, exist_ok=False)
     import numpy as np
@@ -27,7 +30,8 @@ def main():
     MaxwellBoltzmannDistribution(atoms, temperature_K=300, force_temp=True, rng=np.random.RandomState(20260915))
     Stationary(atoms, preserve_temperature=True)
     manifest = dict(backend=args.backend, status='running', natoms=len(atoms), lattice_A=lattice,
-                    ensemble='NVE', timestep_fs=0.5, steps=200, duration_fs=100, initial_temperature_K=300,
+                    ensemble='NVE', timestep_fs=args.timestep_fs, steps=args.steps,
+                    duration_fs=args.steps*args.timestep_fs, record_every=args.record_every, initial_temperature_K=300,
                     seed=20260915, device='cpu', torch_threads=4, equilibration_steps=0,
                     temperature_convention='ASE 3N degrees of freedom; center-of-mass motion removed',
                     packages={n: importlib.metadata.version(n) for n in ['ase', 'torch', 'numpy']})
@@ -52,21 +56,23 @@ def main():
             manifest['model'] = 'DPA-3.3-1M / OMat24'
         manifest['checkpoint_sha256'] = sha(checkpoint)
         rows, frames = [], []
-        dyn = VelocityVerlet(atoms, timestep=0.5 * units.fs)
+        dyn = VelocityVerlet(atoms, timestep=args.timestep_fs * units.fs)
         def record():
             ep, ek = atoms.get_potential_energy(), atoms.get_kinetic_energy()
             forces = atoms.get_forces()
             if not np.isfinite([ep, ek]).all() or not np.isfinite(forces).all():
                 raise ValueError('Nonfinite MD state')
-            rows.append(dict(step=dyn.nsteps, time_fs=dyn.nsteps * 0.5, temperature_K=atoms.get_temperature(),
+            rows.append(dict(step=dyn.nsteps, time_fs=dyn.nsteps * args.timestep_fs, temperature_K=atoms.get_temperature(),
                              potential_eV=ep, kinetic_eV=ek, total_eV=ep+ek,
                              max_force_eV_A=float(np.linalg.norm(forces, axis=1).max())))
-            if dyn.nsteps % 5 == 0:
+            if dyn.nsteps % args.record_every == 0:
                 frame = atoms.copy()
-                frame.info.update(time_fs=dyn.nsteps * 0.5, temperature_K=atoms.get_temperature())
+                frame.info.update(time_fs=dyn.nsteps * args.timestep_fs, temperature_K=atoms.get_temperature())
                 frames.append(frame)
+            if dyn.nsteps % max(50, args.steps // 20) == 0:
+                print('Crystal step', dyn.nsteps, flush=True)
         dyn.attach(record, interval=1)
-        dyn.run(200)
+        dyn.run(args.steps)
         with (args.output / 'thermodynamics.csv').open('w', newline='') as f:
             writer = csv.DictWriter(f, fieldnames=list(rows[0]))
             writer.writeheader(); writer.writerows(rows)
