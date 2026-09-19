@@ -1,0 +1,81 @@
+{
+  "status": "completed",
+  "model": "DPA-3.3-1M / OMat24",
+  "device": "cuda",
+  "source_trajectory_sha256": "c1322db8ceae8fe987b159ca459bacff2d85d48dca1663f75dc34261f7ddd273",
+  "source_initial_frame": 0,
+  "checkpoint_sha256": "36fe440c111108d60cda54aa7d3fccac743794de25abef4d49564b9fb896a55b",
+  "source_script_sha256": "8f29e173af3cb646e89e2bf69388acdcaab27cdeef32403719b4c48af1925f88",
+  "natoms": 153,
+  "substrate_atoms": 150,
+  "carbon_index": 150,
+  "fixed_indices": [
+    60,
+    62,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    124,
+    126,
+    132,
+    147,
+    148,
+    149
+  ],
+  "initial_cell_A": [
+    [
+      10.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      10.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      100.0
+    ]
+  ],
+  "pbc": [
+    true,
+    true,
+    true
+  ],
+  "original_cell_height_A": 43.74,
+  "requested_duration_fs": 2000,
+  "steps": 8000,
+  "timestep_fs": 0.25,
+  "record_every": 20,
+  "initial_surface_z_A": 23.74,
+  "boundary_guard_A": 12.0,
+  "saved_frames": 401,
+  "packages": {
+    "ase": "3.26.0",
+    "torch": "2.11.0+cu128",
+    "deepmd-kit": "3.2.0",
+    "numpy": "2.4.6"
+  },
+  "protocol": "Rerun from identical initial coordinates and velocities; only vacuum height changed. NVE with fixed bottom.",
+  "limitations": [
+    "Cold unrelaxed substrate; one neutral impact; no charge exchange or electronic stopping",
+    "The installed DeePMD ASE adapter treats any periodic direction as fully periodic; all three remain periodic",
+    "Carbon-fragment departure is an event diagnostic, not complete substrate equilibration or an etch yield"
+  ],
+  "parameter_devices": [
+    "cuda:0"
+  ],
+  "cutoff_A": 6.0,
+  "last_step": 8000,
+  "duration_fs": 2000.0,
+  "max_abs_energy_change_meV_atom": 0.024807585419527635,
+  "final_energy_change_meV_atom": -0.009218511962114694,
+  "final_top_clearance_A": 27.634002434383262,
+  "wall_seconds": 751.4891560000251
+}

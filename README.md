@@ -12,7 +12,21 @@ The [reactive reliability report](reports/reliability/README.md) compares the sa
 
 [Reproduction and methodology](docs/RELIABILITY.md) / [frozen frame-selection plan](configs/reliability_plan.json). Earlier pilot and MD results are preserved.
 
-## Longer trajectories and DFT ground truth
+## Periodic trajectories: full impact event and 2 ps crystals
+
+The primary animations now show the **actual periodic cell**, faded neighboring image atoms, and bonds crossing periodic boundaries. The impact uses a **100 A-tall periodic cell** to follow the outgoing fragment without the old top-boundary re-entry. Its overview shows the full cell; a second camera follows the original projectile carbon.
+
+[Extended impact event and diagnostics](results/long-md/interface-event-gpu/README.md) / [full-size impact MP4](results/long-md/interface-event-gpu/animation.mp4) / [visualization methodology](docs/VISUALIZATION.md).
+
+![Extended impact with periodic boundaries](results/long-md/interface-event-gpu/animation.gif)
+
+The crystal comparison now covers the existing **2 ps** trajectories for all three models, with a synchronized clock and explicit periodic images. Crystal vibrations have no single event-completion time; this is a longer observation window.
+
+![Two-picosecond periodic crystal comparison](results/long-md/crystal_comparison.gif)
+
+[Full-size crystal comparison MP4](results/long-md/crystal_comparison.mp4). The earlier 50-100 fs movies below are archived smoke tests.
+
+## Earlier 1 ps run and DFT ground truth
 
 The short runs were extended twentyfold and the snapshot comparison was widened from six frames to a whole reference trajectory. A **1 ps CF2 impact on silica** (153 atoms, DPA-3.3-1M/OMat24, CUDA, 4000 steps in 433 s) and **2 ps Si NVE trajectories** for MACE, NequIP and DeePMD are in [longer trajectories and reference validation](results/long-md/README.md), together with single points from every checkpoint against **all 1000 archived DFT frames** of the CF2 30 eV etching reference trajectory.
 
@@ -24,25 +38,25 @@ The short runs were extended twentyfold and the snapshot comparison was widened 
 
 Pooled over 1000 frames and 150,037 atoms, these confirm the six-frame pilot ordering on this one etching sequence; the six pilot frames are a subset, so the two are consistent rather than independent. The archived labels are DFT single points on snapshots another model generated, so they measure agreement along the reference chemistry, not that any of these models would produce that trajectory. Per-frame metrics, per-element errors and both energy conventions are in [the report](results/long-md/README.md) and [`reports/etch_validation_metrics.csv`](reports/etch_validation_metrics.csv).
 
-![CF2 impact on silica, 1 ps](results/long-md/interface-gpu/animation.gif)
+[Archived 1 ps CF2 impact animation](results/long-md/interface-gpu/animation.gif).
 
 The 1 ps impact reaches 4.25 A below the initial surface height at 113 fs and then returns upward; by 1000 fs the projectile carbon is near the top of the retained periodic cell, which bounds how much further this cell can honestly be run.
 
-## Surface-interface and crystal MD
+## Archived 50-100 fs smoke tests
 
 A **50 fs neutral CF2 impact on silica** (153 atoms, 30 eV, DeePMD DPA-3.3/OMat24, CPU and CUDA) and **100 fs Si crystal trajectories** for MACE, NequIP and DeePMD are saved in [short MD results](results/short-md/README.md), with actual trajectories, energy logs, manifests and animations. These are exploratory short runs; the impact uses a cold, unrelaxed slab with a fixed bottom and does not establish etch yields or plasma accuracy.
 
 [CPU/GPU comparison](results/short-md/CPU_GPU.md) / [GPU animation](results/short-md/interface-gpu/animation.gif).
 
-![Synchronized CPU and GPU interface comparison](results/short-md/interface_comparison.gif)
+[Archived 50 fs CPU/GPU comparison](results/short-md/interface_comparison.gif).
 
-The side-by-side interface animation compares CPU and GPU at identical physical timestamps. ASE/PyVista ball-and-stick renderings use actual atom coordinates; the full-size videos include both the whole slab and the impact close-up. Bond lines are distance-based visual guides, not chemical reaction assignments. Colors: Si gold, O red, C gray, F green. [Side-by-side MP4](results/short-md/interface_comparison.mp4) / [CPU MP4 video](results/short-md/interface/animation.mp4) / [GPU MP4 video](results/short-md/interface-gpu/animation.mp4) / [Visualization details](docs/VISUALIZATION.md).
+The side-by-side interface animation compares CPU and GPU at identical physical timestamps. ASE/PyVista ball-and-stick renderings use actual atom coordinates; the full-size videos include the full periodic cell and a view following the original projectile carbon. Bond lines are distance-based visual guides, not chemical reaction assignments. Colors: Si gold, O red, C gray, F green. [Side-by-side MP4](results/short-md/interface_comparison.mp4) / [CPU MP4 video](results/short-md/interface/animation.mp4) / [GPU MP4 video](results/short-md/interface-gpu/animation.mp4) / [Visualization details](docs/VISUALIZATION.md).
 
 [Initial structure](results/short-md/interface/initial.png) / [Final structure](results/short-md/interface/final.png) / [Energy diagnostics](results/short-md/energy_conservation.png).
 
-![Synchronized MACE, NequIP and DeePMD crystal comparison](results/short-md/crystal_comparison.gif)
+[Archived 100 fs crystal comparison](results/short-md/crystal_comparison.gif).
 
-[Crystal comparison MP4](results/short-md/crystal_comparison.mp4). The three panels show the same physical timestamp. Crystal display: eight simulated atoms with 2x2x2 periodic copies, without magnifying displacements. [NequIP animation](results/short-md/nequip/animation.gif) / [DeePMD animation](results/short-md/deepmd/animation.gif).
+[Crystal comparison MP4](results/short-md/crystal_comparison.mp4). The three panels show the same physical timestamp. Crystal display: eight simulated atoms with faded neighboring periodic images, without magnifying displacements. [NequIP animation](results/short-md/nequip/animation.gif) / [DeePMD animation](results/short-md/deepmd/animation.gif).
 
 The pilot contains four crystal, two surface and six etching frames per materials model, plus a two-atom Si equation of state. Snapshot force accuracy is measured against archived DFT labels. Equation-of-state values are predictions without matched DFT property validation. These small samples do not establish production plasma accuracy, etch rates or a general model ranking.
 

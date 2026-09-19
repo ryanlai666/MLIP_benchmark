@@ -97,10 +97,12 @@ def main():
 
     fig, axes = plt.subplots(3, 1, figsize=(9, 8), sharex=True, layout='constrained')
     axes[0].plot(interface['time_fs'], interface['potential_eV'] - interface['potential_eV'][0], color='#b2472f', lw=1)
-    axes[0].set(ylabel='Potential change (eV)', title='CF2 / silica impact, DPA-3.3-1M / OMat24, CUDA')
+    axes[0].set(ylabel='Potential change (eV)', title='Archived CF2 / silica impact, DPA-3.3-1M / OMat24, CUDA | PBC x/y/z')
     axes[1].plot(interface['time_fs'], interface['carbon_z_A'], color='#36465e', lw=1, label='projectile C height z')
     axes[1].plot(interface['time_fs'], interface['projectile_min_substrate_distance_A'], color='#22bc92', lw=1,
                  label='min projectile-substrate distance')
+    axes[1].axhline(impact['cell_top_A'], color='#235c91', ls='--', label='z-periodic cell top')
+    axes[1].axhline(impact['substrate_top_A'], color='#b77f30', ls=':', label='initial surface height')
     axes[1].set(ylabel='Distance (A)')
     axes[1].legend(fontsize=8)
     axes[2].plot(interface['time_fs'], interface['drift_meV_atom'], color='#7d3c98', lw=1)
@@ -168,6 +170,8 @@ def main():
             writer.writerow({'checkpoint': LABELS[backend], **{k: summary[k] for k in fields[1:]}})
 
     text = ['# Longer trajectories and full-reference-trajectory validation', '',
+            'For the current PBC-aware movies, see the [visualization guide](../../docs/VISUALIZATION.md) and '
+            '[extended 2 ps impact event](interface-event-gpu/README.md). The runs below remain archived results.', '',
             'Two measurements were added to the earlier short pilot: molecular dynamics runs twenty times longer than '
             'the committed short ones, and single points against every archived DFT frame of one etching reference '
             'trajectory instead of six sampled frames. No model was trained or fine-tuned.', '',

@@ -1,5 +1,7 @@
 # Longer trajectories and full-reference-trajectory validation
 
+For the current PBC-aware movies, see the [visualization guide](../../docs/VISUALIZATION.md) and [extended 2 ps impact event](interface-event-gpu/README.md). The runs below remain archived results.
+
 Two measurements were added to the earlier short pilot: molecular dynamics runs twenty times longer than the committed short ones, and single points against every archived DFT frame of one etching reference trajectory instead of six sampled frames. No model was trained or fine-tuned.
 
 ## Longer molecular dynamics

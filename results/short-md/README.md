@@ -1,5 +1,7 @@
 # Short molecular dynamics results
 
+For the current periodic-cell visualizations and full impact event, see the [visualization guide](../../docs/VISUALIZATION.md) and [extended 2 ps impact](../long-md/interface-event-gpu/README.md). The trajectories reported below remain the original archived runs.
+
 Three crystal checks and one surface-interface trajectory were run sequentially on CPU. These are short numerical/visual demonstrations, not equilibrium sampling or validated etching predictions.
 
 | System | Model | Atoms | Time (fs) | Step (fs) | Max absolute energy change (meV/atom) |

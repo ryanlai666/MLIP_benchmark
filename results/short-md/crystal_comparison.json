@@ -48,5 +48,10 @@
     97.5,
     100.0
   ],
-  "fps": 10
+  "fps": 10,
+  "source_movie_sha256": {
+    "mace": "0e46be46d6cf4bd2fdddd0976687f7ae10ef68ab51e5c7c3675d030cac1e5c63",
+    "nequip": "b8e26ec9756e1dd71b1685f9dfdd51854335cd1217dac233da1c057ed36865e5",
+    "deepmd": "9084dca87803a360b31127218af1765d961cbebe53679af16d5c6d9cfc588222"
+  }
 }

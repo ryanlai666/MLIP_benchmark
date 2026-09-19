@@ -1,21 +1,31 @@
-﻿# Atomistic visualization
+# Atomistic visualization and periodic boundaries
 
-Trajectories are read with ASE and rendered as shaded ball-and-stick geometry using PyVista/VTK. The interface view combines a slab overview and an enlarged impact-region view. Crystal views display 2x2x2 periodic copies of the eight-atom simulated cell. Coordinates and displacements are not magnified.
+The primary movies now cover the [2 ps impact event](../results/long-md/interface-event-gpu/README.md) and the [2 ps crystal comparison](../results/long-md/crystal_comparison.mp4). The earlier 50 fs impact and 100 fs crystal movies are archived smoke tests, not the main event view.
 
-- Spheres use 0.46 times ASE covalent radii for visual clarity.
-- Bond guides connect displayed atoms separated by less than 1.15 times the sum of covalent radii. They are visual proximity guides, not inferred bond orders or reaction assignments. Display-boundary bonds are omitted.
-- The interface close-up uses a fixed selection of atoms whose initial z is above 17 Angstrom; the overview shows all atoms. Vacuum is cropped from the display. The physical simulation cell is unchanged.
-- Colors: Si gold, O red, C slate, F green. Camera position is fixed throughout each animation.
-- GIF and MP4 frames use actual saved MD configurations at 10 display frames/second. Playback time is unrelated to physical elapsed time. Timestamps show the physical time.
-- CPU/GPU and model comparison panels are synchronized by saved physical timestamps. The CPU/GPU comparison focuses on the impact region; each full-size video also includes the whole slab.
+ASE reads the actual trajectories; PyVista/VTK renders ball-and-stick geometry. Every view identifies the periodic axes and cell dimensions. A blue wireframe uses all twelve edges of the actual cell vectors, including support for triclinic cells. Red/green/blue arrows indicate the a/b/c vectors.
 
-The MD trajectories and numerical results are unchanged. Each rendering manifest records the source trajectory SHA256 and rendering package versions.
+- Solid atoms belong to one wrapped simulation cell. Faded atoms are real periodic images in a 2.8 A display halo. Crystals show images in x/y/z. Slabs show lateral x/y images; the z-periodic continuation lies across the vacuum and the complete z cell boundary is visible in the overview.
+- Bonds use 1.15 times summed ASE covalent radii. Image atoms allow genuine short bonds across periodic faces to be drawn without drawing a long line through the box. Faded bonds include image atoms. These are proximity guides, not reaction or bond-order assignments.
+- Spheres use 0.46 times ASE covalent radii. Colors are Si gold, O red, C slate and F green. Coordinates/displacements are never magnified; wrapping is for display only and trajectory files are unchanged.
+- The interface overview shows the whole periodic cell, including vacuum. The second camera follows the original projectile carbon, retaining the departing fragment in view instead of clipping it at the surface close-up. Periodic images are visualization copies, not additional simulated atoms.
+- MP4/GIF playback is 10 fps. Interface rendering samples the first 250 fs densely, then uses the selected stride; playback speed is therefore not a constant conversion to physical time. Every frame carries its physical timestamp, and every rendering manifest records the exact frame indices and timestamps.
+- Comparison panels are synchronized from rendering manifests, not from an assumed one-to-one correspondence with saved trajectory frames.
+
+The new impact simulation starts from the earlier saved initial positions and velocities, increases the cell height from 43.74 to 100 A, and runs to 2 ps at 0.25 fs per step. The installed DeePMD ASE adapter passes a full periodic cell when any PBC flag is true, so this run deliberately retains all three periodic directions rather than pretending z is nonperiodic. A guard stops the simulation before any atom approaches the top periodic boundary within max(12 A, twice the model cutoff). The event report checks sustained geometric separation and outward motion; it does not claim full substrate equilibration or an etch yield.
 
 ```powershell
-uv venv --python 3.11.14 .venv-render
-uv pip install --python .venv-render/Scripts/python.exe -r environments/render-windows-py311.lock.txt
-.venv-render/Scripts/python.exe scripts/render_atomistic.py
+# New run; use a new --output directory if results already exist.
+.venv-deepmd-gpu/Scripts/python.exe scripts/run_impact_event.py
+.venv-render/Scripts/python.exe scripts/report_impact_event.py
+
+# Main 2 ps movies and synchronized crystal comparison.
+.venv-render/Scripts/python.exe scripts/render_periodic_md.py --names interface-event-gpu mace nequip deepmd --stride 4
 .venv-render/Scripts/python.exe scripts/render_comparisons.py
+
+# Optional archived previews, with the same PBC-aware display.
+.venv-render/Scripts/python.exe scripts/render_periodic_md.py --root results/short-md --names interface interface-gpu mace nequip deepmd --stride 1
+.venv-render/Scripts/python.exe scripts/render_comparisons.py --root results/short-md --interface
+.venv-render/Scripts/python.exe scripts/render_comparisons.py --root results/short-md
 ```
 
-Sources: [ASE trajectory I/O](https://docs.ase-lib.org/ase/io/io.html), [PyVista mesh rendering](https://docs.pyvista.org/api/plotting/_autosummary/pyvista.plotter.add_mesh), [PyVista animation guidance](https://docs.pyvista.org/examples/02-plot/gif).
+`scripts/render_atomistic.py` is a compatibility entry point for the new renderer and defaults to the long trajectories. Use the existing `.venv-render` environment described by `environments/render-windows-py311.lock.txt`. Manifests record source trajectory hashes, cell/PBC settings, periodic-image axes, camera behavior, timestamps and package versions.

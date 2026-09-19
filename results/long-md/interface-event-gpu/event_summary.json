@@ -1,0 +1,30 @@
+{
+  "trajectory_sha256": "3bbdf2183fd9141a615bb1cd02c5864e724fdccdece00d47d1c429d1d421a573",
+  "thermodynamics_sha256": "ee4518da277819f3c29529645ff6224e7bab05eb3abca572aa272fbbb6cf0680",
+  "report_script_sha256": "ee0930a2d12cf7c592253dfae82493e20c242fa892fa2a5cb4094b6b12f7455c",
+  "duration_fs": 2000.0,
+  "deepest_time_fs": 112.75,
+  "deepest_carbon_z_A": 19.488454997228775,
+  "depth_below_initial_surface_A": 4.251545002771223,
+  "final_carbon_z_A": 72.36599757,
+  "final_carbon_component_indices": [
+    28,
+    150
+  ],
+  "final_carbon_component_elements": [
+    "O",
+    "C"
+  ],
+  "final_component_separation_A": 28.39298615810237,
+  "departure_confirmed": true,
+  "final_sustained_departure_start_fs": 670.0,
+  "departure_confirmation_time_fs": 870.0,
+  "minimum_top_clearance_A": 27.634002434383262,
+  "max_abs_energy_change_meV_atom": 0.024807585419527635,
+  "final_fluorine_z_A": [
+    19.54178766,
+    20.84588048
+  ],
+  "criterion": "Carbon-containing proximity component >=8 A from largest slab component, component center of mass >10 A above initial surface and moving outward, sustained for >=200 fs through final frame.",
+  "limitations": "Connectivity uses 1.2 x covalent radii and is geometric, not a chemical product or yield assignment. Departure does not imply substrate equilibration."
+}

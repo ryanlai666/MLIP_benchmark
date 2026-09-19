@@ -57,5 +57,9 @@
     49.0,
     50.0
   ],
-  "fps": 10
+  "fps": 10,
+  "source_movie_sha256": {
+    "interface": "fbc4325e36ef1e665efb3994fcd872f99135be0b567f498585a074c9ebf04750",
+    "interface-gpu": "6d19076aabfe5355e527a17987ade123d0b0670c8c2d6893f8a9356f24c8b79e"
+  }
 }
