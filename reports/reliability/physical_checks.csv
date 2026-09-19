@@ -1,0 +1,343 @@
+backend,id,kind,case,status,rotation_energy_error_eV,rotation_force_max_eV_A,translation_energy_error_eV,translation_force_max_eV_A,permutation_energy_error_eV,permutation_force_max_eV_A,reference_force_scale_eV_A,pair,distance_A,reference,energy_eV,radial_force_eV_A,net_force_eV_A,fd_steps_A,fd_force_errors_eV_A
+mace,symmetry:dft/FC/CF0.2_d2.3.extxyz:0,symmetry,dft/FC/CF0.2_d2.3.extxyz:0,ok,0.0,1.0036416142611415e-13,0.0,3.9246383920499284e-14,6.821210263296962e-13,8.881784197001252e-15,11.574837283928176,,,,,,,,
+mace,symmetry:dft/etch/trj_CF2_30eV.extxyz:0,symmetry,dft/etch/trj_CF2_30eV.extxyz:0,ok,0.0,5.90361093344427e-14,0.0,8.837375276016246e-14,0.0,4.884981308350689e-15,4.869336500288885,,,,,,,,
+mace,symmetry:dft/mqa/mqa_Si.extxyz:0,symmetry,dft/mqa/mqa_Si.extxyz:0,ok,5.684341886080802e-14,1.8346435481930712e-14,5.684341886080802e-14,2.4202861936828413e-14,1.7053025658242404e-13,1.887379141862766e-15,1.1074092623757763,,,,,,,,
+mace,symmetry:dft/qsd/qsd_data.extxyz:13,symmetry,dft/qsd/qsd_data.extxyz:13,ok,0.0,4.9911463850804694e-14,0.0,9.059419880941277e-14,0.0,4.773959005888173e-15,6.930880768986977,,,,,,,,
+mace,pair:C-C:0.5,pair,,ok,,,,,,,,C-C,0.5,"none; qualitative diagnostic, not chemical accuracy",38.54120954978332,185.47608287733408,0.0,,
+mace,pair:C-C:0.65,pair,,ok,,,,,,,,C-C,0.65,"none; qualitative diagnostic, not chemical accuracy",18.84527977103528,121.98791449582194,0.0,,
+mace,pair:C-C:0.8,pair,,ok,,,,,,,,C-C,0.8,"none; qualitative diagnostic, not chemical accuracy",3.6417695964868897,90.5324942928507,0.0,"[0.001, 0.0005]","[0.0015731232640945336, 0.000393309676383069]"
+mace,pair:C-C:1,pair,,ok,,,,,,,,C-C,1.0,"none; qualitative diagnostic, not chemical accuracy",-7.0361575429791685,25.37684734311537,0.0,,
+mace,pair:C-C:1.2,pair,,ok,,,,,,,,C-C,1.2,"none; qualitative diagnostic, not chemical accuracy",-9.832064188525479,4.441099894842103,0.0,,
+mace,pair:C-C:1.5,pair,,ok,,,,,,,,C-C,1.5,"none; qualitative diagnostic, not chemical accuracy",-9.00267106673375,-6.729982819924801,0.0,"[0.001, 0.0005]","[2.014814519046837e-05, 5.0370159536683445e-06]"
+mace,pair:C-C:2,pair,,ok,,,,,,,,C-C,2.0,"none; qualitative diagnostic, not chemical accuracy",-5.449028141668065,-7.387878479308081,0.0,,
+mace,pair:C-C:2.5,pair,,ok,,,,,,,,C-C,2.5,"none; qualitative diagnostic, not chemical accuracy",-3.134731169251544,-1.6158506389867764,0.0,,
+mace,pair:C-C:3,pair,,ok,,,,,,,,C-C,3.0,"none; qualitative diagnostic, not chemical accuracy",-2.7901083490311995,-0.269896974160268,0.0,"[0.001, 0.0005]","[5.55866551177342e-07, 1.3896692524495435e-07]"
+mace,pair:C-C:4,pair,,ok,,,,,,,,C-C,4.0,"none; qualitative diagnostic, not chemical accuracy",-2.6123671471142793,-0.13434538836408966,0.0,,
+mace,pair:C-C:6,pair,,ok,,,,,,,,C-C,6.0,"none; qualitative diagnostic, not chemical accuracy",-2.52347014,0.0,0.0,,
+mace,pair:C-F:0.5,pair,,ok,,,,,,,,C-F,0.5,"none; qualitative diagnostic, not chemical accuracy",65.02896308670007,399.03325371082485,0.0,,
+mace,pair:C-F:0.65,pair,,ok,,,,,,,,C-F,0.65,"none; qualitative diagnostic, not chemical accuracy",28.760135545139427,146.8378621699484,0.0,,
+mace,pair:C-F:0.8,pair,,ok,,,,,,,,C-F,0.8,"none; qualitative diagnostic, not chemical accuracy",8.088228730106305,98.78800156351649,0.0,"[0.001, 0.0005]","[0.0004970138854218931, 0.0001242559298049173]"
+mace,pair:C-F:1,pair,,ok,,,,,,,,C-F,1.0,"none; qualitative diagnostic, not chemical accuracy",-3.5346335353144616,32.32408821888555,0.0,,
+mace,pair:C-F:1.2,pair,,ok,,,,,,,,C-F,1.2,"none; qualitative diagnostic, not chemical accuracy",-7.138440379391328,6.263359092135272,0.0,,
+mace,pair:C-F:1.5,pair,,ok,,,,,,,,C-F,1.5,"none; qualitative diagnostic, not chemical accuracy",-6.699921988637349,-5.352683002707128,0.0,"[0.001, 0.0005]","[1.646982199687841e-05, 4.117452203189487e-06]"
+mace,pair:C-F:2,pair,,ok,,,,,,,,C-F,2.0,"none; qualitative diagnostic, not chemical accuracy",-3.8301701067242244,-5.020752900565232,0.0,,
+mace,pair:C-F:2.5,pair,,ok,,,,,,,,C-F,2.5,"none; qualitative diagnostic, not chemical accuracy",-2.4789281680697055,-1.0051148552107159,0.0,,
+mace,pair:C-F:3,pair,,ok,,,,,,,,C-F,3.0,"none; qualitative diagnostic, not chemical accuracy",-2.174659796376517,-0.4330033321490979,0.0,"[0.001, 0.0005]","[5.697090343925737e-08, 1.424308215813852e-08]"
+mace,pair:C-F:4,pair,,ok,,,,,,,,C-F,4.0,"none; qualitative diagnostic, not chemical accuracy",-1.894462851901783,-0.1449626946614832,0.0,,
+mace,pair:C-F:6,pair,,ok,,,,,,,,C-F,6.0,"none; qualitative diagnostic, not chemical accuracy",-1.7805555100000001,0.0,0.0,,
+mace,pair:C-O:0.5,pair,,ok,,,,,,,,C-O,0.5,"none; qualitative diagnostic, not chemical accuracy",62.84914463959601,193.66631402010248,0.0,,
+mace,pair:C-O:0.65,pair,,ok,,,,,,,,C-O,0.65,"none; qualitative diagnostic, not chemical accuracy",27.275892915460314,257.55533752514026,0.0,,
+mace,pair:C-O:0.8,pair,,ok,,,,,,,,C-O,0.8,"none; qualitative diagnostic, not chemical accuracy",-0.12211096194899218,111.2631399108833,0.0,"[0.001, 0.0005]","[0.0010562662736930406, 0.00026407918309701017]"
+mace,pair:C-O:1,pair,,ok,,,,,,,,C-O,1.0,"none; qualitative diagnostic, not chemical accuracy",-12.221137544596663,25.261206469702245,0.0,,
+mace,pair:C-O:1.2,pair,,ok,,,,,,,,C-O,1.2,"none; qualitative diagnostic, not chemical accuracy",-13.61545916640064,-5.128036705103318,0.0,,
+mace,pair:C-O:1.5,pair,,ok,,,,,,,,C-O,1.5,"none; qualitative diagnostic, not chemical accuracy",-10.502600311014033,-12.11967394012268,0.0,"[0.001, 0.0005]","[5.334812684054668e-06, 1.3336825901433258e-06]"
+mace,pair:C-O:2,pair,,ok,,,,,,,,C-O,2.0,"none; qualitative diagnostic, not chemical accuracy",-5.256854139174113,-7.930180216518933,0.0,,
+mace,pair:C-O:2.5,pair,,ok,,,,,,,,C-O,2.5,"none; qualitative diagnostic, not chemical accuracy",-3.2954427356100267,-1.1832048301962954,0.0,,
+mace,pair:C-O:3,pair,,ok,,,,,,,,C-O,3.0,"none; qualitative diagnostic, not chemical accuracy",-3.0176088745559477,-0.2614527550289836,0.0,"[0.001, 0.0005]","[2.8877932933824013e-07, 7.219435715910549e-08]"
+mace,pair:C-O:4,pair,,ok,,,,,,,,C-O,4.0,"none; qualitative diagnostic, not chemical accuracy",-2.867176045381256,-0.09370226249399216,0.0,,
+mace,pair:C-O:6,pair,,ok,,,,,,,,C-O,6.0,"none; qualitative diagnostic, not chemical accuracy",-2.81012291,0.0,0.0,,
+mace,pair:C-Si:0.5,pair,,ok,,,,,,,,C-Si,0.5,"none; qualitative diagnostic, not chemical accuracy",44.39723441847492,137.454122245637,0.0,,
+mace,pair:C-Si:0.65,pair,,ok,,,,,,,,C-Si,0.65,"none; qualitative diagnostic, not chemical accuracy",35.452909344626725,-2.369732955039206,0.0,,
+mace,pair:C-Si:0.8,pair,,ok,,,,,,,,C-Si,0.8,"none; qualitative diagnostic, not chemical accuracy",28.59560162938567,113.32306719679765,0.0,"[0.001, 0.0005]","[0.0018940343932314363, 0.0004735014823751271]"
+mace,pair:C-Si:1,pair,,ok,,,,,,,,C-Si,1.0,"none; qualitative diagnostic, not chemical accuracy",8.9542924075051,69.58091935997012,0.0,,
+mace,pair:C-Si:1.2,pair,,ok,,,,,,,,C-Si,1.2,"none; qualitative diagnostic, not chemical accuracy",-0.7298067850531982,33.80152171314396,0.0,,
+mace,pair:C-Si:1.5,pair,,ok,,,,,,,,C-Si,1.5,"none; qualitative diagnostic, not chemical accuracy",-5.833832018596487,6.228819653010796,0.0,"[0.001, 0.0005]","[2.5046274067186403e-05, 6.261545627772591e-06]"
+mace,pair:C-Si:2,pair,,ok,,,,,,,,C-Si,2.0,"none; qualitative diagnostic, not chemical accuracy",-5.792555202858725,-2.992875879385481,0.0,,
+mace,pair:C-Si:2.5,pair,,ok,,,,,,,,C-Si,2.5,"none; qualitative diagnostic, not chemical accuracy",-4.162518809807322,-3.1497524016897995,0.0,,
+mace,pair:C-Si:3,pair,,ok,,,,,,,,C-Si,3.0,"none; qualitative diagnostic, not chemical accuracy",-2.925648003019603,-1.6491860753518253,0.0,"[0.001, 0.0005]","[5.914544207730188e-07, 1.4786458923943258e-07]"
+mace,pair:C-Si:4,pair,,ok,,,,,,,,C-Si,4.0,"none; qualitative diagnostic, not chemical accuracy",-2.2314869620965996,-0.2649226512351784,0.0,,
+mace,pair:C-Si:6,pair,,ok,,,,,,,,C-Si,6.0,"none; qualitative diagnostic, not chemical accuracy",-2.08812537,0.0,0.0,,
+mace,pair:F-F:0.5,pair,,ok,,,,,,,,F-F,0.5,"none; qualitative diagnostic, not chemical accuracy",82.94289831585259,649.2585875177481,0.0,,
+mace,pair:F-F:0.65,pair,,ok,,,,,,,,F-F,0.65,"none; qualitative diagnostic, not chemical accuracy",25.89664190063346,217.1168302719845,0.0,,
+mace,pair:F-F:0.8,pair,,ok,,,,,,,,F-F,0.8,"none; qualitative diagnostic, not chemical accuracy",4.332722911854415,67.1041088692793,0.0,"[0.001, 0.0005]","[0.002158214616912346, 0.0005395774557257482]"
+mace,pair:F-F:1,pair,,ok,,,,,,,,F-F,1.0,"none; qualitative diagnostic, not chemical accuracy",0.8055258012070281,1.2844364692489414,0.0,,
+mace,pair:F-F:1.2,pair,,ok,,,,,,,,F-F,1.2,"none; qualitative diagnostic, not chemical accuracy",-1.0360407194147103,6.158051102575743,0.0,,
+mace,pair:F-F:1.5,pair,,ok,,,,,,,,F-F,1.5,"none; qualitative diagnostic, not chemical accuracy",-1.6508730496890314,-1.5713752886972694,0.0,"[0.001, 0.0005]","[2.9514300831756657e-05, 7.378591122098044e-06]"
+mace,pair:F-F:2,pair,,ok,,,,,,,,F-F,2.0,"none; qualitative diagnostic, not chemical accuracy",-1.205617275350202,-0.1615211304833002,0.0,,
+mace,pair:F-F:2.5,pair,,ok,,,,,,,,F-F,2.5,"none; qualitative diagnostic, not chemical accuracy",-1.1241423822223038,-0.04023367382362518,0.0,,
+mace,pair:F-F:3,pair,,ok,,,,,,,,F-F,3.0,"none; qualitative diagnostic, not chemical accuracy",-1.1586154723853999,0.11226037895662734,0.0,"[0.001, 0.0005]","[2.433403562124292e-07, 6.083478999718839e-08]"
+mace,pair:F-F:4,pair,,ok,,,,,,,,F-F,4.0,"none; qualitative diagnostic, not chemical accuracy",-1.1378581974002029,-0.11542238963533998,0.0,,
+mace,pair:F-F:6,pair,,ok,,,,,,,,F-F,6.0,"none; qualitative diagnostic, not chemical accuracy",-1.03764088,0.0,0.0,,
+mace,pair:F-O:0.5,pair,,ok,,,,,,,,F-O,0.5,"none; qualitative diagnostic, not chemical accuracy",87.91787899571383,531.8238254869682,0.0,,
+mace,pair:F-O:0.65,pair,,ok,,,,,,,,F-O,0.65,"none; qualitative diagnostic, not chemical accuracy",27.97794896735325,257.0935387466648,0.0,,
+mace,pair:F-O:0.8,pair,,ok,,,,,,,,F-O,0.8,"none; qualitative diagnostic, not chemical accuracy",5.242761288511455,64.41258425188462,0.0,"[0.001, 0.0005]","[0.0021350299700912956, 0.0005338092611708589]"
+mace,pair:F-O:1,pair,,ok,,,,,,,,F-O,1.0,"none; qualitative diagnostic, not chemical accuracy",2.0696712760142963,11.117846818856425,0.0,,
+mace,pair:F-O:1.2,pair,,ok,,,,,,,,F-O,1.2,"none; qualitative diagnostic, not chemical accuracy",-2.9506282146847327,16.812416305905334,0.0,,
+mace,pair:F-O:1.5,pair,,ok,,,,,,,,F-O,1.5,"none; qualitative diagnostic, not chemical accuracy",-4.5142545328228305,-2.862751365721829,0.0,"[0.001, 0.0005]","[2.9232017519476017e-05, 7.307986040316905e-06]"
+mace,pair:F-O:2,pair,,ok,,,,,,,,F-O,2.0,"none; qualitative diagnostic, not chemical accuracy",-2.5604572856094965,-1.2601878818815409,0.0,,
+mace,pair:F-O:2.5,pair,,ok,,,,,,,,F-O,2.5,"none; qualitative diagnostic, not chemical accuracy",-2.1690765811106436,-0.3438796128046653,0.0,,
+mace,pair:F-O:3,pair,,ok,,,,,,,,F-O,3.0,"none; qualitative diagnostic, not chemical accuracy",-2.149154597435009,0.11414198868841746,0.0,"[0.001, 0.0005]","[4.539210083920331e-07, 1.1348044376413569e-07]"
+mace,pair:F-O:4,pair,,ok,,,,,,,,F-O,4.0,"none; qualitative diagnostic, not chemical accuracy",-2.140095628173826,-0.09715092472390076,0.0,,
+mace,pair:F-O:6,pair,,ok,,,,,,,,F-O,6.0,"none; qualitative diagnostic, not chemical accuracy",-2.06720828,0.0,0.0,,
+mace,pair:F-Si:0.5,pair,,ok,,,,,,,,F-Si,0.5,"none; qualitative diagnostic, not chemical accuracy",141.28476453517413,256.20027664877307,0.0,,
+mace,pair:F-Si:0.65,pair,,ok,,,,,,,,F-Si,0.65,"none; qualitative diagnostic, not chemical accuracy",79.25019463374264,478.1789865526754,0.0,,
+mace,pair:F-Si:0.8,pair,,ok,,,,,,,,F-Si,0.8,"none; qualitative diagnostic, not chemical accuracy",29.956284880856423,200.78359784632653,0.0,"[0.001, 0.0005]","[0.0019645658043145886, 0.0004911372518279222]"
+mace,pair:F-Si:1,pair,,ok,,,,,,,,F-Si,1.0,"none; qualitative diagnostic, not chemical accuracy",4.421610636328408,76.59596101126434,0.0,,
+mace,pair:F-Si:1.2,pair,,ok,,,,,,,,F-Si,1.2,"none; qualitative diagnostic, not chemical accuracy",-4.234434796877316,22.101982865375454,0.0,,
+mace,pair:F-Si:1.5,pair,,ok,,,,,,,,F-Si,1.5,"none; qualitative diagnostic, not chemical accuracy",-7.759913520006114,3.1305466827395163,0.0,"[0.001, 0.0005]","[2.5284288523330645e-05, 6.321077965942834e-06]"
+mace,pair:F-Si:2,pair,,ok,,,,,,,,F-Si,2.0,"none; qualitative diagnostic, not chemical accuracy",-6.3071883755543325,-5.590752404526707,0.0,,
+mace,pair:F-Si:2.5,pair,,ok,,,,,,,,F-Si,2.5,"none; qualitative diagnostic, not chemical accuracy",-3.6796957366185254,-3.5933340125812796,0.0,,
+mace,pair:F-Si:3,pair,,ok,,,,,,,,F-Si,3.0,"none; qualitative diagnostic, not chemical accuracy",-2.4887784480549238,-1.5885383135144662,0.0,"[0.001, 0.0005]","[4.555799058003629e-07, 1.1389611342949024e-07]"
+mace,pair:F-Si:4,pair,,ok,,,,,,,,F-Si,4.0,"none; qualitative diagnostic, not chemical accuracy",-1.636229969004419,-0.4739080719682499,0.0,,
+mace,pair:F-Si:6,pair,,ok,,,,,,,,F-Si,6.0,"none; qualitative diagnostic, not chemical accuracy",-1.3452107400000002,0.0,0.0,,
+mace,pair:O-O:0.5,pair,,ok,,,,,,,,O-O,0.5,"none; qualitative diagnostic, not chemical accuracy",77.52688639240563,225.93272208715425,0.0,,
+mace,pair:O-O:0.65,pair,,ok,,,,,,,,O-O,0.65,"none; qualitative diagnostic, not chemical accuracy",45.815049066795325,284.2227479510493,0.0,,
+mace,pair:O-O:0.8,pair,,ok,,,,,,,,O-O,0.8,"none; qualitative diagnostic, not chemical accuracy",8.206489459758819,132.90008007691176,0.0,"[0.001, 0.0005]","[0.0044324584365256214, 0.0011081761213347363]"
+mace,pair:O-O:1,pair,,ok,,,,,,,,O-O,1.0,"none; qualitative diagnostic, not chemical accuracy",-5.616142869642346,40.43898651147887,0.0,,
+mace,pair:O-O:1.2,pair,,ok,,,,,,,,O-O,1.2,"none; qualitative diagnostic, not chemical accuracy",-9.397713476311788,3.2249570527796005,0.0,,
+mace,pair:O-O:1.5,pair,,ok,,,,,,,,O-O,1.5,"none; qualitative diagnostic, not chemical accuracy",-8.268822467461954,-7.774093751578428,0.0,"[0.001, 0.0005]","[6.918370785591321e-06, 1.7296635439478791e-06]"
+mace,pair:O-O:2,pair,,ok,,,,,,,,O-O,2.0,"none; qualitative diagnostic, not chemical accuracy",-3.9589928796885956,-3.487077670734381,0.0,,
+mace,pair:O-O:2.5,pair,,ok,,,,,,,,O-O,2.5,"none; qualitative diagnostic, not chemical accuracy",-3.0984781750327506,-0.5755354300338829,0.0,,
+mace,pair:O-O:3,pair,,ok,,,,,,,,O-O,3.0,"none; qualitative diagnostic, not chemical accuracy",-3.0604698262918415,0.15762173992890371,0.0,"[0.001, 0.0005]","[4.834169287093459e-07, 1.208542821373726e-07]"
+mace,pair:O-O:4,pair,,ok,,,,,,,,O-O,4.0,"none; qualitative diagnostic, not chemical accuracy",-3.130473601005163,-0.02602364653801144,0.0,,
+mace,pair:O-O:6,pair,,ok,,,,,,,,O-O,6.0,"none; qualitative diagnostic, not chemical accuracy",-3.09677568,0.0,0.0,,
+mace,pair:O-Si:0.5,pair,,ok,,,,,,,,O-Si,0.5,"none; qualitative diagnostic, not chemical accuracy",137.26276058689737,1313.8207487245325,0.0,,
+mace,pair:O-Si:0.65,pair,,ok,,,,,,,,O-Si,0.65,"none; qualitative diagnostic, not chemical accuracy",64.82549311778784,204.71136586041962,0.0,,
+mace,pair:O-Si:0.8,pair,,ok,,,,,,,,O-Si,0.8,"none; qualitative diagnostic, not chemical accuracy",34.13050165718475,216.5698585054037,0.0,"[0.001, 0.0005]","[0.002058228022036701, 0.0005145776305255367]"
+mace,pair:O-Si:1,pair,,ok,,,,,,,,O-Si,1.0,"none; qualitative diagnostic, not chemical accuracy",4.4215287475454454,82.62689650075173,0.0,,
+mace,pair:O-Si:1.2,pair,,ok,,,,,,,,O-Si,1.2,"none; qualitative diagnostic, not chemical accuracy",-6.103367392516561,29.613164264501506,0.0,,
+mace,pair:O-Si:1.5,pair,,ok,,,,,,,,O-Si,1.5,"none; qualitative diagnostic, not chemical accuracy",-9.932254558106482,1.4596283712250995,0.0,"[0.001, 0.0005]","[3.307162882171255e-05, 8.267941717488014e-06]"
+mace,pair:O-Si:2,pair,,ok,,,,,,,,O-Si,2.0,"none; qualitative diagnostic, not chemical accuracy",-7.402601590793524,-6.880079038591704,0.0,,
+mace,pair:O-Si:2.5,pair,,ok,,,,,,,,O-Si,2.5,"none; qualitative diagnostic, not chemical accuracy",-4.533581705957425,-4.4007909353415595,0.0,,
+mace,pair:O-Si:3,pair,,ok,,,,,,,,O-Si,3.0,"none; qualitative diagnostic, not chemical accuracy",-3.1709654233915616,-1.3864423759160527,0.0,"[0.001, 0.0005]","[1.6293459470517746e-06, 4.073358983447406e-07]"
+mace,pair:O-Si:4,pair,,ok,,,,,,,,O-Si,4.0,"none; qualitative diagnostic, not chemical accuracy",-2.5664694747971737,-0.2897840019280539,0.0,,
+mace,pair:O-Si:6,pair,,ok,,,,,,,,O-Si,6.0,"none; qualitative diagnostic, not chemical accuracy",-2.37477814,0.0,0.0,,
+mace,pair:Si-Si:0.5,pair,,ok,,,,,,,,Si-Si,0.5,"none; qualitative diagnostic, not chemical accuracy",126.62830237909219,567.0058719600933,0.0,,
+mace,pair:Si-Si:0.65,pair,,ok,,,,,,,,Si-Si,0.65,"none; qualitative diagnostic, not chemical accuracy",60.688016068141735,354.9534426903806,0.0,,
+mace,pair:Si-Si:0.8,pair,,ok,,,,,,,,Si-Si,0.8,"none; qualitative diagnostic, not chemical accuracy",43.38923309476587,73.51431151642825,0.0,"[0.001, 0.0005]","[0.0030874773118512167, 0.0007720845454457503]"
+mace,pair:Si-Si:1,pair,,ok,,,,,,,,Si-Si,1.0,"none; qualitative diagnostic, not chemical accuracy",22.6325017090016,81.31781156786309,0.0,,
+mace,pair:Si-Si:1.2,pair,,ok,,,,,,,,Si-Si,1.2,"none; qualitative diagnostic, not chemical accuracy",8.071417837283366,56.64901622809081,0.0,,
+mace,pair:Si-Si:1.5,pair,,ok,,,,,,,,Si-Si,1.5,"none; qualitative diagnostic, not chemical accuracy",-0.8865858212618943,12.476392538703664,0.0,"[0.001, 0.0005]","[0.00010048929064332413, 2.512230449092101e-05]"
+mace,pair:Si-Si:2,pair,,ok,,,,,,,,Si-Si,2.0,"none; qualitative diagnostic, not chemical accuracy",-4.789945651520627,2.5167185247592534,0.0,,
+mace,pair:Si-Si:2.5,pair,,ok,,,,,,,,Si-Si,2.5,"none; qualitative diagnostic, not chemical accuracy",-4.288503561360293,-2.394967239012148,0.0,,
+mace,pair:Si-Si:3,pair,,ok,,,,,,,,Si-Si,3.0,"none; qualitative diagnostic, not chemical accuracy",-3.246179290380236,-1.8253837740946444,0.0,"[0.001, 0.0005]","[1.1151373380258178e-07, 2.787796882230964e-08]"
+mace,pair:Si-Si:4,pair,,ok,,,,,,,,Si-Si,4.0,"none; qualitative diagnostic, not chemical accuracy",-1.9638234118298998,-0.6589204922221904,0.0,,
+mace,pair:Si-Si:6,pair,,ok,,,,,,,,Si-Si,6.0,"none; qualitative diagnostic, not chemical accuracy",-1.6527806,0.0,0.0,,
+nequip,symmetry:dft/FC/CF0.2_d2.3.extxyz:0,symmetry,dft/FC/CF0.2_d2.3.extxyz:0,ok,1.3592436971521238e-05,6.463363350750484e-06,2.430941231068573e-05,6.565150804327402e-06,3.865891790155729e-05,7.551297489971631e-06,13.024078071116232,,,,,,,,
+nequip,symmetry:dft/etch/trj_CF2_30eV.extxyz:0,symmetry,dft/etch/trj_CF2_30eV.extxyz:0,ok,4.500994918998913e-06,5.177520014498782e-06,1.1401950587242027e-05,8.39422954768132e-06,1.94636149899452e-05,7.486819945334844e-06,4.328016545766633,,,,,,,,
+nequip,symmetry:dft/mqa/mqa_Si.extxyz:0,symmetry,dft/mqa/mqa_Si.extxyz:0,ok,1.0576575277809752e-06,1.7768923004091164e-06,3.7018016314505076e-06,2.1541489317322693e-06,5.288287638904876e-07,1.8344904081368796e-06,1.1212841997546996,,,,,,,,
+nequip,symmetry:dft/qsd/qsd_data.extxyz:13,symmetry,dft/qsd/qsd_data.extxyz:13,ok,2.5346230358991306e-06,7.856096766678533e-06,4.322310701354581e-06,6.326583975202471e-06,2.9365997988861636e-06,6.69755542226369e-06,9.433576531792307,,,,,,,,
+nequip,pair:C-C:0.5,pair,,ok,,,,,,,,C-C,0.5,"none; qualitative diagnostic, not chemical accuracy",114.69683010222815,683.935934559008,0.0,,
+nequip,pair:C-C:0.65,pair,,ok,,,,,,,,C-C,0.65,"none; qualitative diagnostic, not chemical accuracy",44.41941060426038,316.84196806731705,0.0,,
+nequip,pair:C-C:0.8,pair,,ok,,,,,,,,C-C,0.8,"none; qualitative diagnostic, not chemical accuracy",10.6625768791139,149.44115268729885,0.0,"[0.001, 0.0005]","[0.0007736857286886334, 0.004357733455748303]"
+nequip,pair:C-C:1,pair,,ok,,,,,,,,C-C,1.0,"none; qualitative diagnostic, not chemical accuracy",-6.263795768887709,40.23636903587014,0.0,,
+nequip,pair:C-C:1.2,pair,,ok,,,,,,,,C-C,1.2,"none; qualitative diagnostic, not chemical accuracy",-10.32052384838512,6.267968031571197,0.0,,
+nequip,pair:C-C:1.5,pair,,ok,,,,,,,,C-C,1.5,"none; qualitative diagnostic, not chemical accuracy",-9.713846419664439,-6.137745093080859,0.0,"[0.001, 0.0005]","[0.0014949639104528956, 0.0010730517892127978]"
+nequip,pair:C-C:2,pair,,ok,,,,,,,,C-C,2.0,"none; qualitative diagnostic, not chemical accuracy",-6.15037417584598,-6.5918043584671775,0.0,,
+nequip,pair:C-C:2.5,pair,,ok,,,,,,,,C-C,2.5,"none; qualitative diagnostic, not chemical accuracy",-4.080833699775642,-2.369569822533742,0.0,,
+nequip,pair:C-C:3,pair,,ok,,,,,,,,C-C,3.0,"none; qualitative diagnostic, not chemical accuracy",-3.402525657061191,-0.687291235508969,0.0,"[0.001, 0.0005]","[0.00011988503905169257, 0.002423030059972686]"
+nequip,pair:C-C:4,pair,,ok,,,,,,,,C-C,4.0,"none; qualitative diagnostic, not chemical accuracy",-2.7915475555907623,-0.0155757309487845,0.0,,
+nequip,pair:C-C:6,pair,,ok,,,,,,,,C-C,6.0,"none; qualitative diagnostic, not chemical accuracy",-2.773,-0.0,0.0,,
+nequip,pair:C-F:0.5,pair,,ok,,,,,,,,C-F,0.5,"none; qualitative diagnostic, not chemical accuracy",162.22572435389444,1000.9415873036737,0.0,,
+nequip,pair:C-F:0.65,pair,,ok,,,,,,,,C-F,0.65,"none; qualitative diagnostic, not chemical accuracy",57.883121388560184,468.4573988369609,0.0,,
+nequip,pair:C-F:0.8,pair,,ok,,,,,,,,C-F,0.8,"none; qualitative diagnostic, not chemical accuracy",12.127027205735583,165.12669286665684,0.0,"[0.001, 0.0005]","[0.0013658345552016726, 0.0030492281690897016]"
+nequip,pair:C-F:1,pair,,ok,,,,,,,,C-F,1.0,"none; qualitative diagnostic, not chemical accuracy",-4.7930041274790725,36.32468360792656,0.0,,
+nequip,pair:C-F:1.2,pair,,ok,,,,,,,,C-F,1.2,"none; qualitative diagnostic, not chemical accuracy",-8.009032599742678,3.5528995931922243,0.0,,
+nequip,pair:C-F:1.5,pair,,ok,,,,,,,,C-F,1.5,"none; qualitative diagnostic, not chemical accuracy",-7.516703177335929,-4.449778750390399,0.0,"[0.001, 0.0005]","[0.00039653053892685364, 0.0012228288063571569]"
+nequip,pair:C-F:2,pair,,ok,,,,,,,,C-F,2.0,"none; qualitative diagnostic, not chemical accuracy",-5.289553159530239,-2.548187104426891,0.0,,
+nequip,pair:C-F:2.5,pair,,ok,,,,,,,,C-F,2.5,"none; qualitative diagnostic, not chemical accuracy",-4.5828198477254585,-1.3105474900510863,0.0,,
+nequip,pair:C-F:3,pair,,ok,,,,,,,,C-F,3.0,"none; qualitative diagnostic, not chemical accuracy",-3.920621722305272,-1.1638048523659257,0.0,"[0.001, 0.0005]","[0.00029360915228915374, 0.000992050830185942]"
+nequip,pair:C-F:4,pair,,ok,,,,,,,,C-F,4.0,"none; qualitative diagnostic, not chemical accuracy",-3.538658612869982,0.35306623505649687,0.0,,
+nequip,pair:C-F:6,pair,,ok,,,,,,,,C-F,6.0,"none; qualitative diagnostic, not chemical accuracy",-2.1539,-0.0,0.0,,
+nequip,pair:C-O:0.5,pair,,ok,,,,,,,,C-O,0.5,"none; qualitative diagnostic, not chemical accuracy",140.20342269993188,938.2479930264907,0.0,,
+nequip,pair:C-O:0.65,pair,,ok,,,,,,,,C-O,0.65,"none; qualitative diagnostic, not chemical accuracy",42.59476447391721,417.31922168499784,0.0,,
+nequip,pair:C-O:0.8,pair,,ok,,,,,,,,C-O,0.8,"none; qualitative diagnostic, not chemical accuracy",2.9132492447915155,147.9549331218573,0.0,"[0.001, 0.0005]","[0.00031884469836995777, 0.0018756855572803488]"
+nequip,pair:C-O:1,pair,,ok,,,,,,,,C-O,1.0,"none; qualitative diagnostic, not chemical accuracy",-12.211644794256143,28.6793234064905,0.0,,
+nequip,pair:C-O:1.2,pair,,ok,,,,,,,,C-O,1.2,"none; qualitative diagnostic, not chemical accuracy",-13.804245802355561,-5.125746105925009,0.0,,
+nequip,pair:C-O:1.5,pair,,ok,,,,,,,,C-O,1.5,"none; qualitative diagnostic, not chemical accuracy",-10.787923978765685,-11.564647077030724,0.0,"[0.001, 0.0005]","[0.0004419640215722609, 0.0018295793721954112]"
+nequip,pair:C-O:2,pair,,ok,,,,,,,,C-O,2.0,"none; qualitative diagnostic, not chemical accuracy",-5.9136836896780345,-6.128923073075197,0.0,,
+nequip,pair:C-O:2.5,pair,,ok,,,,,,,,C-O,2.5,"none; qualitative diagnostic, not chemical accuracy",-4.474082298103067,-1.068125799071443,0.0,,
+nequip,pair:C-O:3,pair,,ok,,,,,,,,C-O,3.0,"none; qualitative diagnostic, not chemical accuracy",-4.0969273223551115,-0.7263075266861206,0.0,"[0.001, 0.0005]","[0.0011306789469146539, 0.0015769476471304555]"
+nequip,pair:C-O:4,pair,,ok,,,,,,,,C-O,4.0,"none; qualitative diagnostic, not chemical accuracy",-3.4026550549444172,-0.16298141467690602,0.0,,
+nequip,pair:C-O:6,pair,,ok,,,,,,,,C-O,6.0,"none; qualitative diagnostic, not chemical accuracy",-3.2932,-0.0,0.0,,
+nequip,pair:C-Si:0.5,pair,,ok,,,,,,,,C-Si,0.5,"none; qualitative diagnostic, not chemical accuracy",201.64233739102497,956.3861217762321,0.0,,
+nequip,pair:C-Si:0.65,pair,,ok,,,,,,,,C-Si,0.65,"none; qualitative diagnostic, not chemical accuracy",105.41098806039965,466.4306062292162,0.0,,
+nequip,pair:C-Si:0.8,pair,,ok,,,,,,,,C-Si,0.8,"none; qualitative diagnostic, not chemical accuracy",54.946270506626405,269.98704747201225,0.0,"[0.001, 0.0005]","[0.0008950780149916682, 0.01802010133440035]"
+nequip,pair:C-Si:1,pair,,ok,,,,,,,,C-Si,1.0,"none; qualitative diagnostic, not chemical accuracy",17.24417447275196,125.76957309120627,0.0,,
+nequip,pair:C-Si:1.2,pair,,ok,,,,,,,,C-Si,1.2,"none; qualitative diagnostic, not chemical accuracy",0.6525389807342936,50.30433524033489,0.0,,
+nequip,pair:C-Si:1.5,pair,,ok,,,,,,,,C-Si,1.5,"none; qualitative diagnostic, not chemical accuracy",-6.7813902071575125,8.033460956874102,0.0,"[0.001, 0.0005]","[0.0010202598993132028, 0.0005539033317276676]"
+nequip,pair:C-Si:2,pair,,ok,,,,,,,,C-Si,2.0,"none; qualitative diagnostic, not chemical accuracy",-6.774283379594408,-3.5444753530137767,0.0,,
+nequip,pair:C-Si:2.5,pair,,ok,,,,,,,,C-Si,2.5,"none; qualitative diagnostic, not chemical accuracy",-5.136235838092796,-2.7123311618780597,0.0,,
+nequip,pair:C-Si:3,pair,,ok,,,,,,,,C-Si,3.0,"none; qualitative diagnostic, not chemical accuracy",-4.102436066233825,-1.296166069135546,0.0,"[0.001, 0.0005]","[0.0011924613911582504, 0.0013669259397999234]"
+nequip,pair:C-Si:4,pair,,ok,,,,,,,,C-Si,4.0,"none; qualitative diagnostic, not chemical accuracy",-3.2255636648606822,-0.8414914225536493,0.0,,
+nequip,pair:C-Si:6,pair,,ok,,,,,,,,C-Si,6.0,"none; qualitative diagnostic, not chemical accuracy",-2.2554,-0.0,0.0,,
+nequip,pair:F-F:0.5,pair,,ok,,,,,,,,F-F,0.5,"none; qualitative diagnostic, not chemical accuracy",232.22104547369506,1437.6708923853198,0.0,,
+nequip,pair:F-F:0.65,pair,,ok,,,,,,,,F-F,0.65,"none; qualitative diagnostic, not chemical accuracy",89.40288029707614,592.460150613342,0.0,,
+nequip,pair:F-F:0.8,pair,,ok,,,,,,,,F-F,0.8,"none; qualitative diagnostic, not chemical accuracy",31.027898075891148,228.63328064789766,0.0,"[0.001, 0.0005]","[0.0009887682339524417, 0.00016960244718688955]"
+nequip,pair:F-F:1,pair,,ok,,,,,,,,F-F,1.0,"none; qualitative diagnostic, not chemical accuracy",5.267931840561381,65.9492361281934,0.0,,
+nequip,pair:F-F:1.2,pair,,ok,,,,,,,,F-F,1.2,"none; qualitative diagnostic, not chemical accuracy",-2.191314799571199,17.18361463437664,0.0,,
+nequip,pair:F-F:1.5,pair,,ok,,,,,,,,F-F,1.5,"none; qualitative diagnostic, not chemical accuracy",-3.756835859524881,-0.5497176073443573,0.0,"[0.001, 0.0005]","[0.000571855460995252, 0.0008124094270538507]"
+nequip,pair:F-F:2,pair,,ok,,,,,,,,F-F,2.0,"none; qualitative diagnostic, not chemical accuracy",-4.059398153473871,0.7199564229339872,0.0,,
+nequip,pair:F-F:2.5,pair,,ok,,,,,,,,F-F,2.5,"none; qualitative diagnostic, not chemical accuracy",-3.763284220910727,-0.9785513874006977,0.0,,
+nequip,pair:F-F:3,pair,,ok,,,,,,,,F-F,3.0,"none; qualitative diagnostic, not chemical accuracy",-3.501936185901547,-0.14744178336506847,0.0,"[0.001, 0.0005]","[0.0010023550876506193, 0.0013771675128645966]"
+nequip,pair:F-F:4,pair,,ok,,,,,,,,F-F,4.0,"none; qualitative diagnostic, not chemical accuracy",-4.085792224968202,0.7715504968021746,0.0,,
+nequip,pair:F-F:6,pair,,ok,,,,,,,,F-F,6.0,"none; qualitative diagnostic, not chemical accuracy",-1.5348,-0.0,0.0,,
+nequip,pair:F-O:0.5,pair,,ok,,,,,,,,F-O,0.5,"none; qualitative diagnostic, not chemical accuracy",209.7591494622662,1293.0398124932992,0.0,,
+nequip,pair:F-O:0.65,pair,,ok,,,,,,,,F-O,0.65,"none; qualitative diagnostic, not chemical accuracy",78.48629479805022,566.2159690942435,0.0,,
+nequip,pair:F-O:0.8,pair,,ok,,,,,,,,F-O,0.8,"none; qualitative diagnostic, not chemical accuracy",24.557252981334884,212.60955754808856,0.0,"[0.001, 0.0005]","[0.00012251002738139505, 0.010478745629797004]"
+nequip,pair:F-O:1,pair,,ok,,,,,,,,F-O,1.0,"none; qualitative diagnostic, not chemical accuracy",0.6721656641862754,57.778313783737694,0.0,,
+nequip,pair:F-O:1.2,pair,,ok,,,,,,,,F-O,1.2,"none; qualitative diagnostic, not chemical accuracy",-5.171438511828796,11.104552667745768,0.0,,
+nequip,pair:F-O:1.5,pair,,ok,,,,,,,,F-O,1.5,"none; qualitative diagnostic, not chemical accuracy",-5.629518464684966,-3.4646428140195287,0.0,"[0.001, 0.0005]","[0.0010593565509733338, 0.0006417031426710906]"
+nequip,pair:F-O:2,pair,,ok,,,,,,,,F-O,2.0,"none; qualitative diagnostic, not chemical accuracy",-4.018835953028734,-0.4329756400608833,0.0,,
+nequip,pair:F-O:2.5,pair,,ok,,,,,,,,F-O,2.5,"none; qualitative diagnostic, not chemical accuracy",-4.061044114655762,-0.2367874216829206,0.0,,
+nequip,pair:F-O:3,pair,,ok,,,,,,,,F-O,3.0,"none; qualitative diagnostic, not chemical accuracy",-3.937684791552755,-0.2102288098484285,0.0,"[0.001, 0.0005]","[0.0006588700023512084, 0.0007194541611189598]"
+nequip,pair:F-O:4,pair,,ok,,,,,,,,F-O,4.0,"none; qualitative diagnostic, not chemical accuracy",-4.059301536924959,0.4520991084024425,0.0,,
+nequip,pair:F-O:6,pair,,ok,,,,,,,,F-O,6.0,"none; qualitative diagnostic, not chemical accuracy",-2.6741,-0.0,0.0,,
+nequip,pair:F-Si:0.5,pair,,ok,,,,,,,,F-Si,0.5,"none; qualitative diagnostic, not chemical accuracy",267.2309101752186,1530.8578137200182,0.0,,
+nequip,pair:F-Si:0.65,pair,,ok,,,,,,,,F-Si,0.65,"none; qualitative diagnostic, not chemical accuracy",119.87714737112381,621.1508965722561,0.0,,
+nequip,pair:F-Si:0.8,pair,,ok,,,,,,,,F-Si,0.8,"none; qualitative diagnostic, not chemical accuracy",51.03648735348671,316.92968857798485,0.0,"[0.001, 0.0005]","[0.0029315514291852196, 0.02819758469649969]"
+nequip,pair:F-Si:1,pair,,ok,,,,,,,,F-Si,1.0,"none; qualitative diagnostic, not chemical accuracy",12.614026250956616,115.21174228007845,0.0,,
+nequip,pair:F-Si:1.2,pair,,ok,,,,,,,,F-Si,1.2,"none; qualitative diagnostic, not chemical accuracy",-2.010408195923426,41.23361045238617,0.0,,
+nequip,pair:F-Si:1.5,pair,,ok,,,,,,,,F-Si,1.5,"none; qualitative diagnostic, not chemical accuracy",-7.568698164592787,4.510920912580658,0.0,"[0.001, 0.0005]","[0.0001679952767945636, 0.0014899056646262565]"
+nequip,pair:F-Si:2,pair,,ok,,,,,,,,F-Si,2.0,"none; qualitative diagnostic, not chemical accuracy",-7.07498861695965,-2.766539431512805,0.0,,
+nequip,pair:F-Si:2.5,pair,,ok,,,,,,,,F-Si,2.5,"none; qualitative diagnostic, not chemical accuracy",-5.727849573155187,-2.6114793604308018,0.0,,
+nequip,pair:F-Si:3,pair,,ok,,,,,,,,F-Si,3.0,"none; qualitative diagnostic, not chemical accuracy",-4.61159362812759,-1.7331423080449864,0.0,"[0.001, 0.0005]","[0.00012573251430181287, 0.0006170007818977474]"
+nequip,pair:F-Si:4,pair,,ok,,,,,,,,F-Si,4.0,"none; qualitative diagnostic, not chemical accuracy",-3.709932518723682,-0.3493317440779103,0.0,,
+nequip,pair:F-Si:6,pair,,ok,,,,,,,,F-Si,6.0,"none; qualitative diagnostic, not chemical accuracy",-1.6362999999999999,-0.0,0.0,,
+nequip,pair:O-O:0.5,pair,,ok,,,,,,,,O-O,0.5,"none; qualitative diagnostic, not chemical accuracy",178.16773670205765,1204.7697123388205,0.0,,
+nequip,pair:O-O:0.65,pair,,ok,,,,,,,,O-O,0.65,"none; qualitative diagnostic, not chemical accuracy",59.72449490403242,499.22697124912725,0.0,,
+nequip,pair:O-O:0.8,pair,,ok,,,,,,,,O-O,0.8,"none; qualitative diagnostic, not chemical accuracy",12.529563912294883,175.91435527664166,0.0,"[0.001, 0.0005]","[0.003593957630073419, 0.0016801527663403704]"
+nequip,pair:O-O:1,pair,,ok,,,,,,,,O-O,1.0,"none; qualitative diagnostic, not chemical accuracy",-6.087023412955492,38.712768924859866,0.0,,
+nequip,pair:O-O:1.2,pair,,ok,,,,,,,,O-O,1.2,"none; qualitative diagnostic, not chemical accuracy",-9.287978008200122,2.0132291145484302,0.0,,
+nequip,pair:O-O:1.5,pair,,ok,,,,,,,,O-O,1.5,"none; qualitative diagnostic, not chemical accuracy",-8.040458814316903,-7.539990386836475,0.0,"[0.001, 0.0005]","[0.00030532383424386467, 0.0004700173614473613]"
+nequip,pair:O-O:2,pair,,ok,,,,,,,,O-O,2.0,"none; qualitative diagnostic, not chemical accuracy",-4.459346470993527,-3.5483840554873916,0.0,,
+nequip,pair:O-O:2.5,pair,,ok,,,,,,,,O-O,2.5,"none; qualitative diagnostic, not chemical accuracy",-4.115995327849219,0.44855248165580863,0.0,,
+nequip,pair:O-O:3,pair,,ok,,,,,,,,O-O,3.0,"none; qualitative diagnostic, not chemical accuracy",-4.2676075624083625,0.03210226660891641,0.0,"[0.001, 0.0005]","[0.0008320991863684513, 0.000630129943409885]"
+nequip,pair:O-O:4,pair,,ok,,,,,,,,O-O,4.0,"none; qualitative diagnostic, not chemical accuracy",-3.9576979223775153,-0.12226399484770721,0.0,,
+nequip,pair:O-O:6,pair,,ok,,,,,,,,O-O,6.0,"none; qualitative diagnostic, not chemical accuracy",-3.8134,-0.0,0.0,,
+nequip,pair:O-Si:0.5,pair,,ok,,,,,,,,O-Si,0.5,"none; qualitative diagnostic, not chemical accuracy",237.25273132261395,1155.206223937463,0.0,,
+nequip,pair:O-Si:0.65,pair,,ok,,,,,,,,O-Si,0.65,"none; qualitative diagnostic, not chemical accuracy",119.03553517826889,572.5219597848665,0.0,,
+nequip,pair:O-Si:0.8,pair,,ok,,,,,,,,O-Si,0.8,"none; qualitative diagnostic, not chemical accuracy",52.04446050043193,324.1188566987388,0.0,"[0.001, 0.0005]","[0.0032520993366347284, 0.021789946266721927]"
+nequip,pair:O-Si:1,pair,,ok,,,,,,,,O-Si,1.0,"none; qualitative diagnostic, not chemical accuracy",10.40563367752052,123.71472100451784,0.0,,
+nequip,pair:O-Si:1.2,pair,,ok,,,,,,,,O-Si,1.2,"none; qualitative diagnostic, not chemical accuracy",-4.80347682741475,42.6237007493296,0.0,,
+nequip,pair:O-Si:1.5,pair,,ok,,,,,,,,O-Si,1.5,"none; qualitative diagnostic, not chemical accuracy",-10.109352972524693,1.9788665093524447,0.0,"[0.001, 0.0005]","[0.0019023878349013756, 0.0006418657942095507]"
+nequip,pair:O-Si:2,pair,,ok,,,,,,,,O-Si,2.0,"none; qualitative diagnostic, not chemical accuracy",-7.933051881228733,-5.827544082481634,0.0,,
+nequip,pair:O-Si:2.5,pair,,ok,,,,,,,,O-Si,2.5,"none; qualitative diagnostic, not chemical accuracy",-5.751189887634241,-3.283194997227863,0.0,,
+nequip,pair:O-Si:3,pair,,ok,,,,,,,,O-Si,3.0,"none; qualitative diagnostic, not chemical accuracy",-4.641256321194071,-1.298046139064669,0.0,"[0.001, 0.0005]","[0.00039329996518366883, 0.0019183144125087814]"
+nequip,pair:O-Si:4,pair,,ok,,,,,,,,O-Si,4.0,"none; qualitative diagnostic, not chemical accuracy",-3.658394520733307,-0.7703864491568753,0.0,,
+nequip,pair:O-Si:6,pair,,ok,,,,,,,,O-Si,6.0,"none; qualitative diagnostic, not chemical accuracy",-2.7756,-0.0,0.0,,
+nequip,pair:Si-Si:0.5,pair,,ok,,,,,,,,Si-Si,0.5,"none; qualitative diagnostic, not chemical accuracy",228.6509140236331,1354.6284151222835,0.0,,
+nequip,pair:Si-Si:0.65,pair,,ok,,,,,,,,Si-Si,0.65,"none; qualitative diagnostic, not chemical accuracy",129.38313323299292,320.0775032088627,0.0,,
+nequip,pair:Si-Si:0.8,pair,,ok,,,,,,,,Si-Si,0.8,"none; qualitative diagnostic, not chemical accuracy",99.37409470376846,277.52833955500444,0.0,"[0.001, 0.0005]","[0.040383497399091084, 0.010998006402132887]"
+nequip,pair:Si-Si:1,pair,,ok,,,,,,,,Si-Si,1.0,"none; qualitative diagnostic, not chemical accuracy",51.6271852622832,181.53482245536776,0.0,,
+nequip,pair:Si-Si:1.2,pair,,ok,,,,,,,,Si-Si,1.2,"none; qualitative diagnostic, not chemical accuracy",23.690416493870295,102.35728524155301,0.0,,
+nequip,pair:Si-Si:1.5,pair,,ok,,,,,,,,Si-Si,1.5,"none; qualitative diagnostic, not chemical accuracy",2.8763639948540085,41.41125158605149,0.0,"[0.001, 0.0005]","[0.001973863525215336, 0.0019287865830364126]"
+nequip,pair:Si-Si:2,pair,,ok,,,,,,,,Si-Si,2.0,"none; qualitative diagnostic, not chemical accuracy",-5.672606436377123,4.14742815091165,0.0,,
+nequip,pair:Si-Si:2.5,pair,,ok,,,,,,,,Si-Si,2.5,"none; qualitative diagnostic, not chemical accuracy",-5.553151188000391,-2.1402366365349677,0.0,,
+nequip,pair:Si-Si:3,pair,,ok,,,,,,,,Si-Si,3.0,"none; qualitative diagnostic, not chemical accuracy",-4.654416752015944,-1.3085574760618655,0.0,"[0.001, 0.0005]","[0.0013015017710018562, 0.0026605924505971323]"
+nequip,pair:Si-Si:4,pair,,ok,,,,,,,,Si-Si,4.0,"none; qualitative diagnostic, not chemical accuracy",-3.8470070509092453,-0.8079010468754818,0.0,,
+nequip,pair:Si-Si:6,pair,,ok,,,,,,,,Si-Si,6.0,"none; qualitative diagnostic, not chemical accuracy",-1.7378,-0.0,0.0,,
+deepmd,symmetry:dft/FC/CF0.2_d2.3.extxyz:0,symmetry,dft/FC/CF0.2_d2.3.extxyz:0,ok,8.255243301391602e-06,5.874455497956177e-05,5.02169132232666e-06,2.7460072942631086e-05,1.1920928955078125e-07,2.9262155294418335e-06,13.572008919203654,,,,,,,,
+deepmd,symmetry:dft/etch/trj_CF2_30eV.extxyz:0,symmetry,dft/etch/trj_CF2_30eV.extxyz:0,ok,4.366040229797363e-06,3.4926078655184156e-05,4.902482032775879e-06,8.537112830708793e-05,1.7434358596801758e-06,1.973239704966545e-06,5.617081959244388,,,,,,,,
+deepmd,symmetry:dft/mqa/mqa_Si.extxyz:0,symmetry,dft/mqa/mqa_Si.extxyz:0,ok,8.866190910339355e-07,1.0496879432497774e-05,7.078051567077637e-07,1.006200909614563e-05,6.631016731262207e-07,3.80445271730423e-07,1.7460974710411392,,,,,,,,
+deepmd,symmetry:dft/qsd/qsd_data.extxyz:13,symmetry,dft/qsd/qsd_data.extxyz:13,ok,1.9669532775878906e-06,3.41822549619758e-05,4.425644874572754e-06,4.532397724688053e-05,1.8849968910217285e-06,1.8980354070663452e-06,11.39211972663179,,,,,,,,
+deepmd,pair:C-C:0.5,pair,,ok,,,,,,,,C-C,0.5,"none; qualitative diagnostic, not chemical accuracy",34.27402877807617,4.651766300201416,0.0,,
+deepmd,pair:C-C:0.65,pair,,ok,,,,,,,,C-C,0.65,"none; qualitative diagnostic, not chemical accuracy",35.6694450378418,137.89830017089844,0.0,,
+deepmd,pair:C-C:0.8,pair,,ok,,,,,,,,C-C,0.8,"none; qualitative diagnostic, not chemical accuracy",11.587574005126953,101.81674194335938,0.0,"[0.001, 0.0005]","[0.0032501220703125, 0.0013427734375]"
+deepmd,pair:C-C:1,pair,,ok,,,,,,,,C-C,1.0,"none; qualitative diagnostic, not chemical accuracy",-4.784893035888672,44.63727569580078,0.0,,
+deepmd,pair:C-C:1.2,pair,,ok,,,,,,,,C-C,1.2,"none; qualitative diagnostic, not chemical accuracy",-9.13801097869873,6.206142425537109,0.0,,
+deepmd,pair:C-C:1.5,pair,,ok,,,,,,,,C-C,1.5,"none; qualitative diagnostic, not chemical accuracy",-8.4846830368042,-6.427725791931152,0.0,"[0.001, 0.0005]","[0.0005159378051757812, 3.910064697265625e-05]"
+deepmd,pair:C-C:2,pair,,ok,,,,,,,,C-C,2.0,"none; qualitative diagnostic, not chemical accuracy",-5.520838737487793,-4.360326290130615,0.0,,
+deepmd,pair:C-C:2.5,pair,,ok,,,,,,,,C-C,2.5,"none; qualitative diagnostic, not chemical accuracy",-3.9660720825195312,-1.9392200708389282,0.0,,
+deepmd,pair:C-C:3,pair,,ok,,,,,,,,C-C,3.0,"none; qualitative diagnostic, not chemical accuracy",-3.388827323913574,-0.6851815581321716,0.0,"[0.001, 0.0005]","[0.0005102753639221191, 0.0014639496803283691]"
+deepmd,pair:C-C:4,pair,,ok,,,,,,,,C-C,4.0,"none; qualitative diagnostic, not chemical accuracy",-2.9784011840820312,-0.2728264331817627,0.0,,
+deepmd,pair:C-C:6,pair,,ok,,,,,,,,C-C,6.0,"none; qualitative diagnostic, not chemical accuracy",-2.9620819091796875,-3.7340185372158885e-05,0.0,,
+deepmd,pair:C-F:0.5,pair,,ok,,,,,,,,C-F,0.5,"none; qualitative diagnostic, not chemical accuracy",47.38242816925049,-66.0194091796875,0.0,,
+deepmd,pair:C-F:0.65,pair,,ok,,,,,,,,C-F,0.65,"none; qualitative diagnostic, not chemical accuracy",33.308682441711426,136.3520965576172,0.0,,
+deepmd,pair:C-F:0.8,pair,,ok,,,,,,,,C-F,0.8,"none; qualitative diagnostic, not chemical accuracy",11.380040168762207,147.59654235839844,0.0,"[0.001, 0.0005]","[0.013057708740234375, 0.00113677978515625]"
+deepmd,pair:C-F:1,pair,,ok,,,,,,,,C-F,1.0,"none; qualitative diagnostic, not chemical accuracy",-4.815257549285889,35.056114196777344,0.0,,
+deepmd,pair:C-F:1.2,pair,,ok,,,,,,,,C-F,1.2,"none; qualitative diagnostic, not chemical accuracy",-8.117233455181122,4.768148422241211,0.0,,
+deepmd,pair:C-F:1.5,pair,,ok,,,,,,,,C-F,1.5,"none; qualitative diagnostic, not chemical accuracy",-7.739785522222519,-4.3902459144592285,0.0,"[0.001, 0.0005]","[0.0002148151397705078, 0.00012540817260742188]"
+deepmd,pair:C-F:2,pair,,ok,,,,,,,,C-F,2.0,"none; qualitative diagnostic, not chemical accuracy",-5.4612343311309814,-3.8942127227783203,0.0,,
+deepmd,pair:C-F:2.5,pair,,ok,,,,,,,,C-F,2.5,"none; qualitative diagnostic, not chemical accuracy",-4.0600810050964355,-1.896203875541687,0.0,,
+deepmd,pair:C-F:3,pair,,ok,,,,,,,,C-F,3.0,"none; qualitative diagnostic, not chemical accuracy",-3.3431413173675537,-1.0299925804138184,0.0,"[0.001, 0.0005]","[0.0005717277526855469, 0.00021409988403320312]"
+deepmd,pair:C-F:4,pair,,ok,,,,,,,,C-F,4.0,"none; qualitative diagnostic, not chemical accuracy",-2.937812328338623,-0.01679680123925209,0.0,,
+deepmd,pair:C-F:6,pair,,ok,,,,,,,,C-F,6.0,"none; qualitative diagnostic, not chemical accuracy",-3.4410183429718018,1.3867004327039467e-06,0.0,,
+deepmd,pair:C-O:0.5,pair,,ok,,,,,,,,C-O,0.5,"none; qualitative diagnostic, not chemical accuracy",40.289949893951416,-125.65701293945312,0.0,,
+deepmd,pair:C-O:0.65,pair,,ok,,,,,,,,C-O,0.65,"none; qualitative diagnostic, not chemical accuracy",28.13501214981079,199.98500061035156,0.0,,
+deepmd,pair:C-O:0.8,pair,,ok,,,,,,,,C-O,0.8,"none; qualitative diagnostic, not chemical accuracy",2.792069911956787,156.58241271972656,0.0,"[0.001, 0.0005]","[0.005779266357421875, 0.00148773193359375]"
+deepmd,pair:C-O:1,pair,,ok,,,,,,,,C-O,1.0,"none; qualitative diagnostic, not chemical accuracy",-12.937849521636963,27.74228858947754,0.0,,
+deepmd,pair:C-O:1.2,pair,,ok,,,,,,,,C-O,1.2,"none; qualitative diagnostic, not chemical accuracy",-14.503024756908417,-5.0723795890808105,0.0,,
+deepmd,pair:C-O:1.5,pair,,ok,,,,,,,,C-O,1.5,"none; qualitative diagnostic, not chemical accuracy",-11.34046483039856,-12.482754707336426,0.0,"[0.001, 0.0005]","[0.0006632804870605469, 0.000946044921875]"
+deepmd,pair:C-O:2,pair,,ok,,,,,,,,C-O,2.0,"none; qualitative diagnostic, not chemical accuracy",-6.233930349349976,-7.261600971221924,0.0,,
+deepmd,pair:C-O:2.5,pair,,ok,,,,,,,,C-O,2.5,"none; qualitative diagnostic, not chemical accuracy",-3.856320858001709,-2.6193501949310303,0.0,,
+deepmd,pair:C-O:3,pair,,ok,,,,,,,,C-O,3.0,"none; qualitative diagnostic, not chemical accuracy",-3.1203794479370117,-0.7655423283576965,0.0,"[0.001, 0.0005]","[0.0006955265998840332, 0.0002186894416809082]"
+deepmd,pair:C-O:4,pair,,ok,,,,,,,,C-O,4.0,"none; qualitative diagnostic, not chemical accuracy",-2.8261165618896484,-0.0381445586681366,0.0,,
+deepmd,pair:C-O:6,pair,,ok,,,,,,,,C-O,6.0,"none; qualitative diagnostic, not chemical accuracy",-2.8823676109313965,-3.662121162051335e-05,0.0,,
+deepmd,pair:C-Si:0.5,pair,,ok,,,,,,,,C-Si,0.5,"none; qualitative diagnostic, not chemical accuracy",36.10166025161743,-142.8339080810547,0.0,,
+deepmd,pair:C-Si:0.65,pair,,ok,,,,,,,,C-Si,0.65,"none; qualitative diagnostic, not chemical accuracy",47.77914476394653,-1.3073999881744385,0.0,,
+deepmd,pair:C-Si:0.8,pair,,ok,,,,,,,,C-Si,0.8,"none; qualitative diagnostic, not chemical accuracy",38.89682054519653,118.01915740966797,0.0,"[0.001, 0.0005]","[0.006622314453125, 5.340576171875e-05]"
+deepmd,pair:C-Si:1,pair,,ok,,,,,,,,C-Si,1.0,"none; qualitative diagnostic, not chemical accuracy",16.43419885635376,118.3058090209961,0.0,,
+deepmd,pair:C-Si:1.2,pair,,ok,,,,,,,,C-Si,1.2,"none; qualitative diagnostic, not chemical accuracy",1.60028076171875,49.30035400390625,0.0,,
+deepmd,pair:C-Si:1.5,pair,,ok,,,,,,,,C-Si,1.5,"none; qualitative diagnostic, not chemical accuracy",-6.075216293334961,9.106019020080566,0.0,"[0.001, 0.0005]","[0.0002593994140625, 0.0008134841918945312]"
+deepmd,pair:C-Si:2,pair,,ok,,,,,,,,C-Si,2.0,"none; qualitative diagnostic, not chemical accuracy",-6.403646945953369,-2.9243381023406982,0.0,,
+deepmd,pair:C-Si:2.5,pair,,ok,,,,,,,,C-Si,2.5,"none; qualitative diagnostic, not chemical accuracy",-4.802629470825195,-2.886530637741089,0.0,,
+deepmd,pair:C-Si:3,pair,,ok,,,,,,,,C-Si,3.0,"none; qualitative diagnostic, not chemical accuracy",-3.7739744186401367,-1.2384599447250366,0.0,"[0.001, 0.0005]","[0.0001245737075805664, 0.0005906820297241211]"
+deepmd,pair:C-Si:4,pair,,ok,,,,,,,,C-Si,4.0,"none; qualitative diagnostic, not chemical accuracy",-3.0579006671905518,-0.5333231687545776,0.0,,
+deepmd,pair:C-Si:6,pair,,ok,,,,,,,,C-Si,6.0,"none; qualitative diagnostic, not chemical accuracy",-2.735302686691284,-6.978811870794743e-05,0.0,,
+deepmd,pair:F-F:0.5,pair,,ok,,,,,,,,F-F,0.5,"none; qualitative diagnostic, not chemical accuracy",41.20265769958496,-75.0140609741211,0.0,,
+deepmd,pair:F-F:0.65,pair,,ok,,,,,,,,F-F,0.65,"none; qualitative diagnostic, not chemical accuracy",40.37087059020996,100.61479949951172,0.0,,
+deepmd,pair:F-F:0.8,pair,,ok,,,,,,,,F-F,0.8,"none; qualitative diagnostic, not chemical accuracy",27.452871322631836,155.55599975585938,0.0,"[0.001, 0.0005]","[0.0016326904296875, 0.000274658203125]"
+deepmd,pair:F-F:1,pair,,ok,,,,,,,,F-F,1.0,"none; qualitative diagnostic, not chemical accuracy",5.357150077819824,71.49654388427734,0.0,,
+deepmd,pair:F-F:1.2,pair,,ok,,,,,,,,F-F,1.2,"none; qualitative diagnostic, not chemical accuracy",-2.468092918395996,17.192840576171875,0.0,,
+deepmd,pair:F-F:1.5,pair,,ok,,,,,,,,F-F,1.5,"none; qualitative diagnostic, not chemical accuracy",-3.922469139099121,-0.13496087491512299,0.0,"[0.001, 0.0005]","[0.00025437772274017334, 1.595914363861084e-05]"
+deepmd,pair:F-F:2,pair,,ok,,,,,,,,F-F,2.0,"none; qualitative diagnostic, not chemical accuracy",-3.869826316833496,-0.003140475135296583,0.0,,
+deepmd,pair:F-F:2.5,pair,,ok,,,,,,,,F-F,2.5,"none; qualitative diagnostic, not chemical accuracy",-3.6653213500976562,-0.7274712920188904,0.0,,
+deepmd,pair:F-F:3,pair,,ok,,,,,,,,F-F,3.0,"none; qualitative diagnostic, not chemical accuracy",-3.2616772651672363,-0.7774145603179932,0.0,"[0.001, 0.0005]","[0.0005452632904052734, 0.0007836818695068359]"
+deepmd,pair:F-F:4,pair,,ok,,,,,,,,F-F,4.0,"none; qualitative diagnostic, not chemical accuracy",-2.9491143226623535,0.09521772712469101,0.0,,
+deepmd,pair:F-F:6,pair,,ok,,,,,,,,F-F,6.0,"none; qualitative diagnostic, not chemical accuracy",-3.919954776763916,6.854806997580454e-05,0.0,,
+deepmd,pair:F-O:0.5,pair,,ok,,,,,,,,F-O,0.5,"none; qualitative diagnostic, not chemical accuracy",40.3868613243103,-181.28382873535156,0.0,,
+deepmd,pair:F-O:0.65,pair,,ok,,,,,,,,F-O,0.65,"none; qualitative diagnostic, not chemical accuracy",37.171483516693115,93.93000030517578,0.0,,
+deepmd,pair:F-O:0.8,pair,,ok,,,,,,,,F-O,0.8,"none; qualitative diagnostic, not chemical accuracy",20.05192518234253,131.87286376953125,0.0,"[0.001, 0.0005]","[0.008373260498046875, 0.0031280517578125]"
+deepmd,pair:F-O:1,pair,,ok,,,,,,,,F-O,1.0,"none; qualitative diagnostic, not chemical accuracy",0.9803423881530762,54.403141021728516,0.0,,
+deepmd,pair:F-O:1.2,pair,,ok,,,,,,,,F-O,1.2,"none; qualitative diagnostic, not chemical accuracy",-4.733203172683716,11.745211601257324,0.0,,
+deepmd,pair:F-O:1.5,pair,,ok,,,,,,,,F-O,1.5,"none; qualitative diagnostic, not chemical accuracy",-5.528889179229736,-2.6127376556396484,0.0,"[0.001, 0.0005]","[2.765655517578125e-05, 0.000385284423828125]"
+deepmd,pair:F-O:2,pair,,ok,,,,,,,,F-O,2.0,"none; qualitative diagnostic, not chemical accuracy",-3.9586195945739746,-1.8260676860809326,0.0,,
+deepmd,pair:F-O:2.5,pair,,ok,,,,,,,,F-O,2.5,"none; qualitative diagnostic, not chemical accuracy",-3.4616785049438477,-0.5955936312675476,0.0,,
+deepmd,pair:F-O:3,pair,,ok,,,,,,,,F-O,3.0,"none; qualitative diagnostic, not chemical accuracy",-3.170321464538574,-0.5475647449493408,0.0,"[0.001, 0.0005]","[0.0001556873321533203, 0.0001556873321533203]"
+deepmd,pair:F-O:4,pair,,ok,,,,,,,,F-O,4.0,"none; qualitative diagnostic, not chemical accuracy",-2.9080004692077637,-0.023084789514541626,0.0,,
+deepmd,pair:F-O:6,pair,,ok,,,,,,,,F-O,6.0,"none; qualitative diagnostic, not chemical accuracy",-3.361304759979248,2.1430823835544288e-05,0.0,,
+deepmd,pair:F-Si:0.5,pair,,ok,,,,,,,,F-Si,0.5,"none; qualitative diagnostic, not chemical accuracy",42.76018285751343,-146.23912048339844,0.0,,
+deepmd,pair:F-Si:0.65,pair,,ok,,,,,,,,F-Si,0.65,"none; qualitative diagnostic, not chemical accuracy",47.88780736923218,-9.361811637878418,0.0,,
+deepmd,pair:F-Si:0.8,pair,,ok,,,,,,,,F-Si,0.8,"none; qualitative diagnostic, not chemical accuracy",41.37184476852417,100.12054443359375,0.0,"[0.001, 0.0005]","[0.00667572021484375, 0.0019073486328125]"
+deepmd,pair:F-Si:1,pair,,ok,,,,,,,,F-Si,1.0,"none; qualitative diagnostic, not chemical accuracy",12.432749271392822,118.33489990234375,0.0,,
+deepmd,pair:F-Si:1.2,pair,,ok,,,,,,,,F-Si,1.2,"none; qualitative diagnostic, not chemical accuracy",-2.2270493507385254,40.039024353027344,0.0,,
+deepmd,pair:F-Si:1.5,pair,,ok,,,,,,,,F-Si,1.5,"none; qualitative diagnostic, not chemical accuracy",-7.927029013633728,5.119199752807617,0.0,"[0.001, 0.0005]","[0.0005114078521728516, 0.001068115234375]"
+deepmd,pair:F-Si:2,pair,,ok,,,,,,,,F-Si,2.0,"none; qualitative diagnostic, not chemical accuracy",-7.177215285599232,-4.024040222167969,0.0,,
+deepmd,pair:F-Si:2.5,pair,,ok,,,,,,,,F-Si,2.5,"none; qualitative diagnostic, not chemical accuracy",-5.318625211715698,-3.0870587825775146,0.0,,
+deepmd,pair:F-Si:3,pair,,ok,,,,,,,,F-Si,3.0,"none; qualitative diagnostic, not chemical accuracy",-4.136698961257935,-1.7400659322738647,0.0,"[0.001, 0.0005]","[8.71419906616211e-05, 8.71419906616211e-05]"
+deepmd,pair:F-Si:4,pair,,ok,,,,,,,,F-Si,4.0,"none; qualitative diagnostic, not chemical accuracy",-3.2064220905303955,-0.45291006565093994,0.0,,
+deepmd,pair:F-Si:6,pair,,ok,,,,,,,,F-Si,6.0,"none; qualitative diagnostic, not chemical accuracy",-3.2142393589019775,-6.697581557091326e-05,0.0,,
+deepmd,pair:O-O:0.5,pair,,ok,,,,,,,,O-O,0.5,"none; qualitative diagnostic, not chemical accuracy",41.472161293029785,-120.68543243408203,0.0,,
+deepmd,pair:O-O:0.65,pair,,ok,,,,,,,,O-O,0.65,"none; qualitative diagnostic, not chemical accuracy",29.280068397521973,65.14996337890625,0.0,,
+deepmd,pair:O-O:0.8,pair,,ok,,,,,,,,O-O,0.8,"none; qualitative diagnostic, not chemical accuracy",12.066130638122559,146.342529296875,0.0,"[0.001, 0.0005]","[0.04793548583984375, 0.0126495361328125]"
+deepmd,pair:O-O:1,pair,,ok,,,,,,,,O-O,1.0,"none; qualitative diagnostic, not chemical accuracy",-5.942252159118652,40.80497360229492,0.0,,
+deepmd,pair:O-O:1.2,pair,,ok,,,,,,,,O-O,1.2,"none; qualitative diagnostic, not chemical accuracy",-9.448993682861328,2.694223403930664,0.0,,
+deepmd,pair:O-O:1.5,pair,,ok,,,,,,,,O-O,1.5,"none; qualitative diagnostic, not chemical accuracy",-8.07990837097168,-7.8608880043029785,0.0,"[0.001, 0.0005]","[0.0002493858337402344, 0.0011811256408691406]"
+deepmd,pair:O-O:2,pair,,ok,,,,,,,,O-O,2.0,"none; qualitative diagnostic, not chemical accuracy",-4.505474090576172,-5.0333404541015625,0.0,,
+deepmd,pair:O-O:2.5,pair,,ok,,,,,,,,O-O,2.5,"none; qualitative diagnostic, not chemical accuracy",-3.276616096496582,-0.8292727470397949,0.0,,
+deepmd,pair:O-O:3,pair,,ok,,,,,,,,O-O,3.0,"none; qualitative diagnostic, not chemical accuracy",-3.024221420288086,-0.36371463537216187,0.0,"[0.001, 0.0005]","[0.0005889534950256348, 0.0005889534950256348]"
+deepmd,pair:O-O:4,pair,,ok,,,,,,,,O-O,4.0,"none; qualitative diagnostic, not chemical accuracy",-2.795970916748047,-0.05657465383410454,0.0,,
+deepmd,pair:O-O:6,pair,,ok,,,,,,,,O-O,6.0,"none; qualitative diagnostic, not chemical accuracy",-2.8026533126831055,-1.746128145896364e-05,0.0,,
+deepmd,pair:O-Si:0.5,pair,,ok,,,,,,,,O-Si,0.5,"none; qualitative diagnostic, not chemical accuracy",43.578471183776855,-34.55144500732422,0.0,,
+deepmd,pair:O-Si:0.65,pair,,ok,,,,,,,,O-Si,0.65,"none; qualitative diagnostic, not chemical accuracy",48.03739833831787,9.227042198181152,0.0,,
+deepmd,pair:O-Si:0.8,pair,,ok,,,,,,,,O-Si,0.8,"none; qualitative diagnostic, not chemical accuracy",38.81735897064209,152.2969207763672,0.0,"[0.001, 0.0005]","[0.04186248779296875, 0.0103912353515625]"
+deepmd,pair:O-Si:1,pair,,ok,,,,,,,,O-Si,1.0,"none; qualitative diagnostic, not chemical accuracy",9.890227317810059,116.94141387939453,0.0,,
+deepmd,pair:O-Si:1.2,pair,,ok,,,,,,,,O-Si,1.2,"none; qualitative diagnostic, not chemical accuracy",-5.617458343505859,43.02162170410156,0.0,,
+deepmd,pair:O-Si:1.5,pair,,ok,,,,,,,,O-Si,1.5,"none; qualitative diagnostic, not chemical accuracy",-10.905427247285843,1.7615787982940674,0.0,"[0.001, 0.0005]","[6.628036499023438e-05, 0.00020194053649902344]"
+deepmd,pair:O-Si:2,pair,,ok,,,,,,,,O-Si,2.0,"none; qualitative diagnostic, not chemical accuracy",-8.282648801803589,-7.371957302093506,0.0,,
+deepmd,pair:O-Si:2.5,pair,,ok,,,,,,,,O-Si,2.5,"none; qualitative diagnostic, not chemical accuracy",-5.192186117172241,-4.612944602966309,0.0,,
+deepmd,pair:O-Si:3,pair,,ok,,,,,,,,O-Si,3.0,"none; qualitative diagnostic, not chemical accuracy",-3.7157492637634277,-1.6560602188110352,0.0,"[0.001, 0.0005]","[4.76837158203125e-06, 0.0007200241088867188]"
+deepmd,pair:O-Si:4,pair,,ok,,,,,,,,O-Si,4.0,"none; qualitative diagnostic, not chemical accuracy",-2.944772958755493,-0.38441234827041626,0.0,,
+deepmd,pair:O-Si:6,pair,,ok,,,,,,,,O-Si,6.0,"none; qualitative diagnostic, not chemical accuracy",-2.655587911605835,-8.752870053285733e-05,0.0,,
+deepmd,pair:Si-Si:0.5,pair,,ok,,,,,,,,Si-Si,0.5,"none; qualitative diagnostic, not chemical accuracy",39.20544910430908,-336.1821594238281,0.0,,
+deepmd,pair:Si-Si:0.65,pair,,ok,,,,,,,,Si-Si,0.65,"none; qualitative diagnostic, not chemical accuracy",49.27190113067627,-1.7893590927124023,0.0,,
+deepmd,pair:Si-Si:0.8,pair,,ok,,,,,,,,Si-Si,0.8,"none; qualitative diagnostic, not chemical accuracy",50.17410755157471,41.20154571533203,0.0,"[0.001, 0.0005]","[0.01807403564453125, 0.00099945068359375]"
+deepmd,pair:Si-Si:1,pair,,ok,,,,,,,,Si-Si,1.0,"none; qualitative diagnostic, not chemical accuracy",42.35596942901611,38.17787170410156,0.0,,
+deepmd,pair:Si-Si:1.2,pair,,ok,,,,,,,,Si-Si,1.2,"none; qualitative diagnostic, not chemical accuracy",22.654763221740723,117.22154998779297,0.0,,
+deepmd,pair:Si-Si:1.5,pair,,ok,,,,,,,,Si-Si,1.5,"none; qualitative diagnostic, not chemical accuracy",2.466416358947754,37.511531829833984,0.0,"[0.001, 0.0005]","[0.0017242431640625, 0.003520965576171875]"
+deepmd,pair:Si-Si:2,pair,,ok,,,,,,,,Si-Si,2.0,"none; qualitative diagnostic, not chemical accuracy",-5.1118035316467285,3.2274563312530518,0.0,,
+deepmd,pair:Si-Si:2.5,pair,,ok,,,,,,,,Si-Si,2.5,"none; qualitative diagnostic, not chemical accuracy",-5.0118608474731445,-1.9270693063735962,0.0,,
+deepmd,pair:Si-Si:3,pair,,ok,,,,,,,,Si-Si,3.0,"none; qualitative diagnostic, not chemical accuracy",-4.009971618652344,-1.669010877609253,0.0,"[0.001, 0.0005]","[0.0003960132598876953, 0.0005576610565185547]"
+deepmd,pair:Si-Si:4,pair,,ok,,,,,,,,Si-Si,4.0,"none; qualitative diagnostic, not chemical accuracy",-3.2107114791870117,-0.446635365486145,0.0,,
+deepmd,pair:Si-Si:6,pair,,ok,,,,,,,,Si-Si,6.0,"none; qualitative diagnostic, not chemical accuracy",-2.50852108001709,-0.00011271789117017761,0.0,,

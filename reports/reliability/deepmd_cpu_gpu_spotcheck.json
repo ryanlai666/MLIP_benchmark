@@ -1,0 +1,66 @@
+{
+  "checkpoint_sha256": "36fe440c111108d60cda54aa7d3fccac743794de25abef4d49564b9fb896a55b",
+  "cpu_environment": {
+    "parameter_devices": [
+      "cpu"
+    ],
+    "parameter_dtypes": [
+      "torch.float32"
+    ],
+    "packages": {
+      "torch": "2.11.0",
+      "ase": "3.26.0",
+      "numpy": "2.4.6",
+      "deepmd-kit": "3.2.0"
+    }
+  },
+  "gpu_manifest_sha256": "afc430f84346d7e35d23224f0fb4c19d9523876e61a61a04b6838c17124f50df",
+  "checks_sha256": "71e7f4dfc9932ab2e5ec24a598574e9acf4c41dc10d3f5501cd6aaea2fe49966",
+  "predictions_sha256": "cd04043e88ca4309d5fa41fb2246a1ccec7bd04bc000e28de87d99ddf5f245a0",
+  "script_sha256": "282353d38425beeaa9cb96bc05a3e046f328ac518fbbcbea748eff95166c3694",
+  "checks": [
+    {
+      "id": "pair:C-F:0.5",
+      "cpu_radial_force_eV_A": -66.01844024658203,
+      "gpu_radial_force_eV_A": -66.0194091796875,
+      "absolute_difference_eV_A": 0.00096893310546875
+    },
+    {
+      "id": "pair:C-F:0.65",
+      "cpu_radial_force_eV_A": 136.3521728515625,
+      "gpu_radial_force_eV_A": 136.3520965576172,
+      "absolute_difference_eV_A": 7.62939453125e-05
+    },
+    {
+      "id": "pair:Si-Si:0.5",
+      "cpu_radial_force_eV_A": -336.1821594238281,
+      "gpu_radial_force_eV_A": -336.1821594238281,
+      "absolute_difference_eV_A": 0.0
+    },
+    {
+      "id": "pair:Si-Si:0.65",
+      "cpu_radial_force_eV_A": -1.7892694473266602,
+      "gpu_radial_force_eV_A": -1.7893590927124023,
+      "absolute_difference_eV_A": 8.96453857421875e-05
+    },
+    {
+      "id": "dft/qsd/qsd_data.extxyz:305",
+      "max_cpu_gpu_force_component_difference_eV_A": 180.88305870816112,
+      "cpu_dft_force_component_max_error_eV_A": 52150.26177481515,
+      "gpu_dft_force_component_max_error_eV_A": 51970.178142146324
+    },
+    {
+      "id": "dft/qsd/qsd_data.extxyz:1191",
+      "max_cpu_gpu_force_component_difference_eV_A": 137.6983232498169,
+      "cpu_dft_force_component_max_error_eV_A": 31941.08583309241,
+      "gpu_dft_force_component_max_error_eV_A": 31996.525265236574
+    },
+    {
+      "id": "dft/qsd/qsd_data.extxyz:557",
+      "max_cpu_gpu_force_component_difference_eV_A": 17.025436401279876,
+      "cpu_dft_force_component_max_error_eV_A": 34873.227854566445,
+      "gpu_dft_force_component_max_error_eV_A": 34856.202418165165
+    }
+  ],
+  "purpose": "Targeted reproduction; not a throughput or general device-equivalence test"
+}

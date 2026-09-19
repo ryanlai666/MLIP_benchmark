@@ -1,0 +1,155 @@
+{
+  "plan_sha256": "f6996e2185fe35cb31b4534d063a0c919e92f2ccecbc3b36c60db399e545dd92",
+  "report_script_sha256": "cfedebf0c8f75259193dd798aff82ed2f7cfceceeb15b0ba97b0b8b44f6dd0c5",
+  "artifacts": {
+    "mace": {
+      "manifest.json": "6b80e1ece24454642b0cf9af43f370678d6359c54c9afa86e513f89e2049001d",
+      "predictions.jsonl": "272d77dddbef3aec848c54c96816c2c1ef21543d54087a9971c113418c3a3d93",
+      "checks.jsonl": "63ea1ec68668529d41edee5000109a21219d8a1ee3c4c3d76d59ca07c08008aa"
+    },
+    "nequip": {
+      "manifest.json": "e56ad5041906f0cbd04d5121ea26c2a7e73e47858b104a0acbdf554155961a10",
+      "predictions.jsonl": "19dcf0fdea833352f28bfcbdb2960954c5eabbc893d49d602bc33b7501a8435b",
+      "checks.jsonl": "10b4cb0c3d88e8b4c7058ccc4829cf8d1b039bf521f41123844565de58379dbb"
+    },
+    "deepmd": {
+      "manifest.json": "afc430f84346d7e35d23224f0fb4c19d9523876e61a61a04b6838c17124f50df",
+      "predictions.jsonl": "cd04043e88ca4309d5fa41fb2246a1ccec7bd04bc000e28de87d99ddf5f245a0",
+      "checks.jsonl": "71e7f4dfc9932ab2e5ec24a598574e9acf4c41dc10d3f5501cd6aaea2fe49966"
+    }
+  },
+  "reference_audit_sha256": "33034b9d873efa927be33b3451c2d51e32d6ce8dde49744c051d39170dc02076",
+  "models": {
+    "mace": {
+      "backend": "mace",
+      "model_path": "C:\\Ryan\\python_code\\MLIP_benchmark\\models\\cache\\mace\\macemp0b3mediummodel",
+      "checkpoint_sha256": "2f2be696351ac9e94fbe01cdfb6f017679acdbd2db7645209ef55fec9826b012",
+      "head": null,
+      "device": "cpu",
+      "plan_sha256": "f6996e2185fe35cb31b4534d063a0c919e92f2ccecbc3b36c60db399e545dd92",
+      "runner_sha256": "c5b1a9dc4f11929f5b61efc72ff52aed058725a6420ad17518e217b42d25e9b2",
+      "helpers_sha256": "6a1d1a32f10d4af7dcbde1ab315338e02effc3c38d36e8b67a628368a0786217",
+      "threads": 4,
+      "status": "completed",
+      "started_utc": "2026-09-19T01:31:03.766060+00:00",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "python": "3.11.14",
+      "archive_sha256": "7e436876cc3f8f7385ce483c801b14427f592ac6e0e34398e584bff4b27d923e",
+      "expected_reference_cases": 448,
+      "protocol": "All selected QSD curves intact; uniform sampling within other source groups; no fitting.",
+      "uncertainty": "No confidence intervals: independence between source groups is not established.",
+      "training_overlap": "unknown",
+      "limitations": [
+        "Source groups are not established independent replicates",
+        "QSD energy spans are constrained-path diagnostics, not NEB activation barriers",
+        "Chemical C/F and Si/O subsets do not identify projectile provenance",
+        "Pair scans have no DFT references; no electronic charge or stopping model"
+      ],
+      "parameter_devices": [
+        "cpu"
+      ],
+      "parameter_dtypes": [
+        "torch.float64"
+      ],
+      "packages": {
+        "torch": "2.14.0",
+        "ase": "3.26.0",
+        "numpy": "1.26.4",
+        "mace-torch": "0.3.16"
+      },
+      "reference_completed": 448,
+      "failed_cases": 0,
+      "checks_attempted": 114,
+      "wall_seconds_this_invocation": 1350.6358448000392,
+      "finished_utc": "2026-09-19T01:53:34.429193+00:00"
+    },
+    "nequip": {
+      "backend": "nequip",
+      "model_path": "C:\\Ryan\\python_code\\MLIP_benchmark\\models\\nequip-cache\\b39e883d722e2108867a0b8028e90beeccf2e50c944c9063ef511711984a17fe.nequip.zip",
+      "checkpoint_sha256": "63d4bafd872850a014fd21dedeea416b61173a17750dee0b2b8dd2b126f407aa",
+      "head": null,
+      "device": "cpu",
+      "plan_sha256": "f6996e2185fe35cb31b4534d063a0c919e92f2ccecbc3b36c60db399e545dd92",
+      "runner_sha256": "c5b1a9dc4f11929f5b61efc72ff52aed058725a6420ad17518e217b42d25e9b2",
+      "helpers_sha256": "6a1d1a32f10d4af7dcbde1ab315338e02effc3c38d36e8b67a628368a0786217",
+      "threads": 4,
+      "status": "completed",
+      "started_utc": "2026-09-19T01:33:13.688200+00:00",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "python": "3.11.14",
+      "archive_sha256": "7e436876cc3f8f7385ce483c801b14427f592ac6e0e34398e584bff4b27d923e",
+      "expected_reference_cases": 448,
+      "protocol": "All selected QSD curves intact; uniform sampling within other source groups; no fitting.",
+      "uncertainty": "No confidence intervals: independence between source groups is not established.",
+      "training_overlap": "unknown",
+      "limitations": [
+        "Source groups are not established independent replicates",
+        "QSD energy spans are constrained-path diagnostics, not NEB activation barriers",
+        "Chemical C/F and Si/O subsets do not identify projectile provenance",
+        "Pair scans have no DFT references; no electronic charge or stopping model"
+      ],
+      "parameter_devices": [
+        "cpu"
+      ],
+      "parameter_dtypes": [
+        "torch.float32",
+        "torch.float64"
+      ],
+      "packages": {
+        "torch": "2.14.0",
+        "ase": "3.26.0",
+        "numpy": "2.4.6",
+        "nequip": "0.19.1"
+      },
+      "reference_completed": 448,
+      "failed_cases": 0,
+      "checks_attempted": 114,
+      "wall_seconds_this_invocation": 84.72119099996053,
+      "finished_utc": "2026-09-19T01:34:38.454108+00:00"
+    },
+    "deepmd": {
+      "backend": "deepmd",
+      "model_path": "C:\\Ryan\\python_code\\MLIP_benchmark\\models\\deepmd\\DPA-3.3-1M.pt",
+      "checkpoint_sha256": "36fe440c111108d60cda54aa7d3fccac743794de25abef4d49564b9fb896a55b",
+      "head": "OMat24",
+      "device": "cuda",
+      "plan_sha256": "f6996e2185fe35cb31b4534d063a0c919e92f2ccecbc3b36c60db399e545dd92",
+      "runner_sha256": "c5b1a9dc4f11929f5b61efc72ff52aed058725a6420ad17518e217b42d25e9b2",
+      "helpers_sha256": "6a1d1a32f10d4af7dcbde1ab315338e02effc3c38d36e8b67a628368a0786217",
+      "threads": 4,
+      "status": "completed",
+      "started_utc": "2026-09-19T01:33:54.989840+00:00",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "python": "3.11.14",
+      "archive_sha256": "7e436876cc3f8f7385ce483c801b14427f592ac6e0e34398e584bff4b27d923e",
+      "expected_reference_cases": 448,
+      "protocol": "All selected QSD curves intact; uniform sampling within other source groups; no fitting.",
+      "uncertainty": "No confidence intervals: independence between source groups is not established.",
+      "training_overlap": "unknown",
+      "limitations": [
+        "Source groups are not established independent replicates",
+        "QSD energy spans are constrained-path diagnostics, not NEB activation barriers",
+        "Chemical C/F and Si/O subsets do not identify projectile provenance",
+        "Pair scans have no DFT references; no electronic charge or stopping model"
+      ],
+      "parameter_devices": [
+        "cuda:0"
+      ],
+      "parameter_dtypes": [
+        "torch.float32"
+      ],
+      "packages": {
+        "torch": "2.11.0+cu128",
+        "ase": "3.26.0",
+        "numpy": "2.4.6",
+        "deepmd-kit": "3.2.0"
+      },
+      "reference_completed": 448,
+      "failed_cases": 0,
+      "checks_attempted": 114,
+      "wall_seconds_this_invocation": 284.73598490003496,
+      "finished_utc": "2026-09-19T01:38:39.778943+00:00"
+    }
+  },
+  "device_spotcheck_sha256": "09cc51abdaec2a360a187038c2c0f9940a5d75563c2a3f113d8f95c4aa6f7a0f"
+}

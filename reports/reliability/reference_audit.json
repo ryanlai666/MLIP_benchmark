@@ -1,0 +1,20 @@
+{
+  "archive_sha256": "7e436876cc3f8f7385ce483c801b14427f592ac6e0e34398e584bff4b27d923e",
+  "plan_sha256": "f6996e2185fe35cb31b4534d063a0c919e92f2ccecbc3b36c60db399e545dd92",
+  "reference_convergence_flags": {
+    "FC": {
+      "true": 96
+    },
+    "etch": {
+      "true": 79
+    },
+    "mqa": {
+      "true": 24
+    },
+    "qsd": {
+      "missing": 249
+    }
+  },
+  "minimum_archived_qsd_distance_A": 0.142,
+  "interpretation": "Missing convergence metadata does not prove unconverged DFT; finite labels alone do not independently validate extreme-contact references."
+}

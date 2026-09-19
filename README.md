@@ -4,6 +4,14 @@ A completed small CPU pilot compares MACE-MP-0b3, NequIP-OAM-S and DeePMD DPA-3.
 
 Start with [measured results](reports/PILOT_RESULTS.md), the [longer trajectories and full reference-trajectory validation](results/long-md/README.md), [reproduction instructions](docs/RUN_PILOT.md), [published performance and limitations](docs/PUBLISHED_BASELINES.md), and [development notes](docs/DEVELOPMENT.md). [Model identities](docs/MODELS.md) distinguish architectures, checkpoints and dataset heads.
 
+## Reactive reliability: short-range checks and broader coverage
+
+The [reactive reliability report](reports/reliability/README.md) compares the same three checkpoints on a frozen 448-frame screening plan: 48 complete DFT quasi-static drag curves, CF2/CF3 etching sequences, fluorocarbon bulk, and Si/SiC/SiO2 bulk configurations. Additional pair scans, symmetry checks, and force/energy finite differences probe physical consistency. This is a sampled screen, not the full archive evaluation.
+
+[Force-error tails and worst structures](reports/reliability/README.md#largest-etching-force-errors), [DFT drag-curve comparisons](reports/reliability/qsd_curves.csv), and [per-element/contact-distance metrics](reports/reliability/stratified_forces.csv) expose failures hidden by average errors. Previously identified worst frames are explicitly labeled and excluded from coverage averages. QSD energy differences are evaluated without fitting energy offsets; they are constrained paths, not reaction activation barriers. Source grouping is preserved, and no confidence intervals or independent-replicate claims are made.
+
+[Reproduction and methodology](docs/RELIABILITY.md) / [frozen frame-selection plan](configs/reliability_plan.json). Earlier pilot and MD results are preserved.
+
 ## Longer trajectories and DFT ground truth
 
 The short runs were extended twentyfold and the snapshot comparison was widened from six frames to a whole reference trajectory. A **1 ps CF2 impact on silica** (153 atoms, DPA-3.3-1M/OMat24, CUDA, 4000 steps in 433 s) and **2 ps Si NVE trajectories** for MACE, NequIP and DeePMD are in [longer trajectories and reference validation](results/long-md/README.md), together with single points from every checkpoint against **all 1000 archived DFT frames** of the CF2 30 eV etching reference trajectory.

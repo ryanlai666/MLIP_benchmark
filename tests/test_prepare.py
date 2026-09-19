@@ -12,7 +12,9 @@ spec.loader.exec_module(benchmark)
 
 class PreparationTests(unittest.TestCase):
     def test_configs_resolve_structure_and_record_provenance(self):
-        for path in (ROOT / "configs").glob("*.json"):
+        # These are CHIPS-FF inputs; reliability plans use a separate schema.
+        for name in ["si_mace.json", "si_chgnet.json"]:
+            path = ROOT / "configs" / name
             config, _, manifest = benchmark.prepare(path)
             self.assertTrue(Path(config["structure_path"]).is_file())
             self.assertEqual(len(manifest["structure_sha256"]), 64)

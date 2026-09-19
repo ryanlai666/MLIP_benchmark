@@ -38,3 +38,9 @@ See `results/short-md/README.md` for the committed crystal and surface-interface
 The interface trajectory was also completed with CUDA in `.venv-deepmd-gpu`, with verified `cuda:0` model parameters. See `results/short-md/CPU_GPU.md` and `scripts/compare_md_devices.py` for matching-input checks, numerical differences and the GPU environment snapshot. Crystal MD remains CPU-only.
 
 Atomistic visualization uses `scripts/render_atomistic.py` (ASE/PyVista/VTK) and `scripts/render_comparisons.py` (synchronized panels). Run these in `.venv-render`; see `docs/VISUALIZATION.md`. Source trajectories remain unchanged and rendering manifests record their SHA256.
+
+## Reactive reliability extension
+
+The reproducible screening workflow is documented in `docs/RELIABILITY.md`; results are generated under `reports/reliability/`. `scripts/run_reliability.py` uses a shared frozen selection, local checkpoint hashes, verified device placement and append-only per-atom predictions. `scripts/report_reliability.py` recomputes metrics from raw arrays, compares common successful frames, excludes deliberately targeted outliers from coverage averages, and keeps failures visible. `scripts/plot_reliability.py` exports plots and worst etching structures. `scripts/check_reliability_devices.py` reproduces targeted DeePMD CUDA flags on CPU.
+
+The 448-frame plan includes complete QSD curves, both etching sequences and broader bulk chemistry. This addresses short-range screening and error-tail inspection; independent impact replicas, confidence intervals, true reaction barriers and production etch-yield validation remain future work. Keep new studies in separate output directories and preserve this screening plan. The raw `results/reliability/` arrays are local/ignored; compact reports, plots, case IDs and provenance are versionable.
